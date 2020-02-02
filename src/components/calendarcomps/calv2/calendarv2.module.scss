@@ -1,0 +1,73 @@
+// @import '../calendar.module.scss';
+
+.container {
+
+  background: rgb(162, 184, 162);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  svg {
+    width: 100vw;
+    height: 100vh;
+
+    .bg {
+      fill: #949494;
+    }
+
+    .cells-bg {
+      fill: rgba(191, 243, 191, 0.109);
+
+    }
+
+    .cell {
+      fill: rgba(235, 235, 235, 0.6);
+      fill: #949494;
+      filter: url(#innerShadShort);
+    }
+
+    .cell-frame {
+      fill: transparent;
+      stroke: #eee;
+      stroke-width: 1;
+
+      &:hover {
+        stroke: rgb(255, 35, 35);
+      }
+    }
+
+    .smtwtf {
+
+      polygon,
+      path {
+        filter: url(#innerShad);
+        fill: #fb9570;
+
+      }
+
+    }
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    svg {
+      width: 80vw;
+      height: 80vh;
+      margin: auto;
+      // filter: url(#roughpaper);
+      .bg {
+        filter: url(#roughpaper);
+      }
+      .tile {
+        fill: rgb(199, 35, 35);
+        filter: url(#roughpaper);
+       color: rgba(255, 238, 87, 0.5); 
+      }
+    }
+  }
+}

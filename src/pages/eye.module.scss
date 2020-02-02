@@ -1,0 +1,59 @@
+@import '../styles/animations.scss';
+
+
+.container {
+    background: linear-gradient(32deg, #b4ab83 0%, #ebd282 140%);
+    // background: lightgreen;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    svg.eye {
+        position: absolute;
+        left: 2vw;
+        top: 2vh;
+        // border: 1px dashed brown;
+        width: 100px;
+
+        .bg {
+            fill: #999;
+        }
+
+        .top-lash {
+            fill: brown;
+        }
+
+        .bot-lash {
+            fill: teal;
+        }
+
+        .iris {
+            fill: burlywood;
+        }
+
+        .use1 {
+            clip-path: url(#clip);
+        }
+
+        .eyewhite {
+            clip-path: url(#clip2);
+        }
+
+        .eye {
+            // stroke: red;
+            stroke-width: 2;
+            fill: rgb(0, 0, 0);
+        }
+
+        // &:hover {
+        //     .clipped path {
+        //         animation: blink 200ms ease-out forwards;
+        //     }
+        // }
+
+    }
+
+
+}

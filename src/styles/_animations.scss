@@ -1,0 +1,40 @@
+// @keyframes blink {
+//   0% { 
+//     // transform: scale(1)
+//     transform: translate3d(0px, 0px, 0);
+//     }
+//     100%{ 
+//       // transform: translatex(-80px) translatey(-80px) scale(1);
+//       transform: translate3d(-80px, -80px, 1px);
+//     }
+// }
+
+
+@keyframes shadow {
+    0% { 
+     opacity: 0;
+     transform: translate3d(-4px, -4px, 1px)
+    }
+     100% {
+      opacity: 0.5;
+      transform: translate3d(0px, 0px, 1px)
+    }
+   }
+   @keyframes filler {
+    0% { 
+     opacity: 0.5;
+    }
+     100% {
+       opacity: 1;
+    }
+   }
+   @keyframes up {
+    0% { 
+      transform: translate3d(0px, 0px, 1px)
+    }
+     100% {
+      transform: translate3d(0px, -2px, 1px)
+   
+    }
+   }
+     

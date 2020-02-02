@@ -1,0 +1,29 @@
+.container {
+        background: rgba(25, 20, 183, 0.2);
+        padding: 4%;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        span {
+                position: absolute;
+                top: 50%;
+                right: -2vh;
+                // bottom: 0;
+                font-size: 4rem;
+                opacity: 0.05;
+                font-family: Arial Black;
+        }
+        ul {
+                margin: 4% auto;
+                line-height: normal;
+                list-style-type: none;
+                li {
+                        text-align: left;
+                        font-size: 0.7rem;
+                        font-weight: 100;
+                        font-family:  Helvetica, sans-serif;
+                        // &:first-of-type {
+                        // }
+                }
+        }
+}
