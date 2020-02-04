@@ -14,7 +14,7 @@ const Index = () => {
             <Link to="/cal-two"><button>calv2</button></Link>
             <Link to="/eye"><button>eye</button></Link>
             <Link to="/cal-canvas"><button>CalWrap</button></Link>
-            <Link to="/place-holder"><button>place holder</button></Link>
+            <Link to="/calv4"><button>cal V4</button></Link>
             
             </nav>
 

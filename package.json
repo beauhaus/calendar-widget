@@ -1,7 +1,7 @@
 {
-  "name": "frontendmasters-gatsby",
+  "name": "react-calendar-widget",
   "private": true,
-  "description": "Bare-bones starter for the Gatsby Frontend Masters workshop.",
+  "description": "Calendar widget in SVG.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

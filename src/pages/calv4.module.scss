@@ -1,5 +1,14 @@
 @import '../styles/variables.scss';
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap');
+/* inner SVG viewBox is dimensions of outer * 1.25*/
+:root {
+ --colWidth: 14.285714%;
+ --rowHeight: 6%;
+ --rowIncrement: 6%;
+ --topMargin: 10%;
+ --Lmargin: 0%;
+ --colIncrement: 1;
+}
 
 .container {
   background: linear-gradient(45deg, orange 20%, green 20% 70%, grey 70% 100%);
@@ -11,49 +20,13 @@
   align-content: center;
   flex-direction: column;
 }
+.sub-container {
+opacity: 1;
+}
 
 svg {
   margin: auto;
 }
-  .smtwtfs {
-    path, polygon {
-      fill: slategray;
-      transform: scale(1,0.5);
-    }
-  }
-
-.smtwtfs {
-  .sunday {
-    transform: scale(.1,0.05) translatex(-80%) translateY(50%);
-  }
-  .monday {
-    transform: scale(.1,0.05) translatex(98.5%) translateY(50%);
-  }
-  .tuesday {
-    transform: scale(.1,0.05) translatex(275.75%) translateY(50%);
-  }
-  .wednesday {
-    transform: scale(.1,0.05) translatex(450%) translateY(50%);
-  }
-  .thursday {
-    transform: scale(.1,0.05) translatex(625.5%) translateY(50%);
-  }
-  .friday {
-    transform: scale(.1,0.05) translatex(803%) translateY(50%);
-  }
-  .saturday {
-    transform: scale(.1,0.05) translatex(980%) translateY(50%);
-  }
-}
-  
-
-
-
-
-
-
-
-
 
 .desknote,
 .tabnote {
@@ -64,9 +37,9 @@ svg {
   opacity: 1;
 }
 
-svg.container-svg {
+svg.outer-svg {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 text {
@@ -90,6 +63,21 @@ text {
 
 .inner g rect:hover {
   stroke: #fff;
+}
+
+.smtwtfs {
+  &-phone {
+    display: block;
+    fill: rgb(97, 117, 161);
+  }
+  &-tablet {
+    display: none;
+    fill: rgb(240, 195, 111);
+  }
+  &-desk {
+    display: none;
+    fill: rgb(240, 111, 190);
+  }
 }
 
 /* space from top */
@@ -167,59 +155,28 @@ text {
     --colIncrement: 1.02;
   }
 
-  svg.container-svg {
+  svg.outer-svg {
     height: 65vh;
     width: 90vw;
   }
-  // .smtwtfscontainer {
-    
-    svg.sunday {
-      opacity: 1;   
-      path {
-    
-        transform-origin: 50% 50%;
-        transform: scale(.05,0.05) translateX(-480%);
-      }
-    }
-
-    svg.saturday {
-      opacity: .1;   
-      path {
-    
-        transform-origin: 50% 50%;
-        // transform: scale(.1,0.1) translateX(-480%);
-      }
-    }
-    svg.tuesday {
-      opacity: .1;   
-      path {
-    
-        transform-origin: 50% 50%;
-        // transform: scale(.1,0.1) translateX(-480%);
-      }
-    }
-    svg.thursday {
-      opacity: .1;   
-      path {
-    
-        transform-origin: 50% 50%;
-        // transform: scale(.1,0.1) translateX(-480%);
-      }
-    }
-        
-  // }
+ 
+  .daygrp {
+    transform-origin: 100% 0%;
+    transform: scale(1,1) translatex(0%) translateY(0%);
+  }
   .smtwtfs {
-    transform-origin: 50% 50%;
-    transform: scale(1.2,1) translateX(var(--Lmargin)/2);
-
-    // transform: scale(1,1) translatex(calc(var(--colWidth)/2 + var(--Lmargin)));
-    
-    path, polygon {
-      transform-origin: 50% 50%;
-      fill: slategray;
-      transform: scale(0.5,0.5);
+    &-phone {
+      display: none;
+    }
+    &-tablet {
+      display: block;
+    }
+    &-desk {
+      display: none;
     }
   }
+  
+
   /*
  a -0
  b -1.02 x 12 = 12.24
@@ -255,10 +212,10 @@ text {
     --rowHeight: 11.7%;
     --rowIncrement: 12%;
     --topMargin: 20%;
-    --Lmargin: 4.5%;
+    --Lmargin: 3.9%;
   }
 
-  svg.container-svg {
+  svg.outer-svg {
     height: 80vh;
     width: 80vw;
   }
@@ -271,7 +228,17 @@ text {
   .phonenote {
     opacity: 0;
   }
-
+  .smtwtfs {
+    &-phone {
+      display: none;
+    }
+    &-tablet {
+      display: none;
+    }
+    &-desk {
+      display: block;
+    }
+  }
   .bg {
     fill: rgba(255, 238, 87, 0.5);
   }
