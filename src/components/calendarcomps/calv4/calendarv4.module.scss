@@ -29,11 +29,6 @@ svg {
   margin: auto;
 }
 
-#cellframe {
-      fill: transparent;
-      stroke: #ddd;
-      stroke-width: 1;
-}
 
 .desknote,
 .tabnote {
@@ -60,15 +55,17 @@ text {
   width: 100%;
   height: 100%;
 }
-
+.celltop {
+  stroke-width: 1;
+    width: var(--colWidth);
+    height: var(--rowHeight); 
+    // stroke: #ddd;  
+}
 /* determines dimensions of each cell */
 .cellSymbol {
   rect{
     width: var(--colWidth);
     height: var(--rowHeight); 
-  }
-  &:hover {
-    display: none;
   }
 }
 
@@ -88,6 +85,20 @@ text {
     }
 }
 
+
+/* transparentize */ 
+.rows {
+  rect {
+    fill: transparent;
+  }
+   .celltop {
+           stroke: #ccc;
+      &:hover {
+        stroke: #fff;
+        stroke-width: 1.5;
+      }
+    }
+}
 /* space from top */
 .row-1 {
   transform: translatey(calc(var(--topMargin) + 0 * var(--rowIncrement))) translatex(var(--Lmargin));
@@ -160,7 +171,7 @@ text {
     --rowIncrement: 12.3%;
     --topMargin: 17%;
     --Lmargin: 7.16%;
-    --colIncrement: 1.02;
+    --colIncrement: 1.01;
   }
 
   svg.outer-svg {

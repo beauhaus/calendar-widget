@@ -41,91 +41,216 @@ const CalendarV4 = () => {
                         <feComposite operator="in" in2="inverse" in="color" result="shadow" />
                         <feComposite in2="SourceGraphic" in="shadow" />
                     </filter>
-                   
-                   
+
+
                 </defs>
                 <rect x="0" y="0" width="100%" height="100%" fill="#ddd" />
 
                 <svg className={calv4Styles.inner} viewBox="0 0 800 650">
-                <defs>
-                <linearGradient id="horizgrad" x1="0%" x2="100%" y1="50%" y2="50%" >
-                        <stop offset="96%" stopOpacity="0" />
-                        <stop offset="1" />
-                    </linearGradient>
-                    <linearGradient id="vertgrad" x1="50%" x2="50%" y1="98%" y2="3%" >
-                        <stop offset="96%" stopOpacity="0" />
-                        <stop offset="1" />
-                    </linearGradient>
+                    <defs>
+                        <linearGradient id="horizgrad" x1="0%" x2="100%" y1="50%" y2="50%" >
+                            <stop offset="96%" stopOpacity="0" />
+                            <stop offset="1" />
+                        </linearGradient>
+                        <linearGradient id="vertgrad" x1="50%" x2="50%" y1="98%" y2="3%" >
+                            <stop offset="96%" stopOpacity="0" />
+                            <stop offset="1" />
+                        </linearGradient>
                         <symbol id="cell" className={calv4Styles.cellSymbol} >
                             <rect fill="url(#vertgrad)" />
                             <rect fill="url(#horizgrad)" />
-                            <rect id={calv4Styles.cellframe} /> ✅
-                    </symbol>
-                </defs>
+                        </symbol>
+                    </defs>
                     <rect className={calv4Styles.bg} width="100%" height="100%" filter="url(#roughpaper)" />
 
                     <g className={calv4Styles.rows}>
-                        
+
                         <g className={calv4Styles.row1}>
-                        <use className={calv4Styles.a} xlinkHref="#cell" />
-                        <use className={calv4Styles.b} xlinkHref="#cell" />    
-                        <use className={calv4Styles.c} xlinkHref="#cell"/>
-                        <use className={calv4Styles.d} xlinkHref="#cell"/>
-                        <use className={calv4Styles.e} xlinkHref="#cell"/>
-                        <use className={calv4Styles.f} xlinkHref="#cell"/>
-                        <use className={calv4Styles.g} xlinkHref="#cell"/>
+                            <g className={calv4Styles.a} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.b} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.c} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.d} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.e} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.f} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.g} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
                         </g>
                         <g className={calv4Styles.row2}>
-                        <use className={calv4Styles.a} xlinkHref="#cell" />
-                        <use className={calv4Styles.b} xlinkHref="#cell" />    
-                        <use className={calv4Styles.c} xlinkHref="#cell"/>
-                        <use className={calv4Styles.d} xlinkHref="#cell"/>
-                        <use className={calv4Styles.e} xlinkHref="#cell"/>
-                        <use className={calv4Styles.f} xlinkHref="#cell"/>
-                        <use className={calv4Styles.g} xlinkHref="#cell"/>
+                        <g className={calv4Styles.a} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.b} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.c} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.d} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.e} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.f} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.g} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
                         </g>
                         <g className={calv4Styles.row3}>
-                        <use className={calv4Styles.a} xlinkHref="#cell" />
-                        <use className={calv4Styles.b} xlinkHref="#cell" />    
-                        <use className={calv4Styles.c} xlinkHref="#cell"/>
-                        <use className={calv4Styles.d} xlinkHref="#cell"/>
-                        <use className={calv4Styles.e} xlinkHref="#cell"/>
-                        <use className={calv4Styles.f} xlinkHref="#cell"/>
-                        <use className={calv4Styles.g} xlinkHref="#cell"/>
+                        <g className={calv4Styles.a} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.b} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.c} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.d} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.e} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.f} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.g} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
                         </g>
                         <g className={calv4Styles.row4}>
-                        <use className={calv4Styles.a} xlinkHref="#cell" />
-                        <use className={calv4Styles.b} xlinkHref="#cell" />    
-                        <use className={calv4Styles.c} xlinkHref="#cell"/>
-                        <use className={calv4Styles.d} xlinkHref="#cell"/>
-                        <use className={calv4Styles.e} xlinkHref="#cell"/>
-                        <use className={calv4Styles.f} xlinkHref="#cell"/>
-                        <use className={calv4Styles.g} xlinkHref="#cell"/>
+                        <g className={calv4Styles.a} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.b} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.c} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.d} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.e} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.f} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.g} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
                         </g>
                         <g className={calv4Styles.row5}>
-                        <use className={calv4Styles.a} xlinkHref="#cell" />
-                        <use className={calv4Styles.b} xlinkHref="#cell" />    
-                        <use className={calv4Styles.c} xlinkHref="#cell"/>
-                        <use className={calv4Styles.d} xlinkHref="#cell"/>
-                        <use className={calv4Styles.e} xlinkHref="#cell"/>
-                        <use className={calv4Styles.f} xlinkHref="#cell"/>
-                        <use className={calv4Styles.g} xlinkHref="#cell"/>
+                        <g className={calv4Styles.a} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.b} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.c} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.d} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.e} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.f} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.g} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
                         </g>
                         <g className={calv4Styles.row6}>
-                        <use className={calv4Styles.a} xlinkHref="#cell" />
-                        <use className={calv4Styles.b} xlinkHref="#cell" />    
-                        <use className={calv4Styles.c} xlinkHref="#cell"/>
-                        <use className={calv4Styles.d} xlinkHref="#cell"/>
-                        <use className={calv4Styles.e} xlinkHref="#cell"/>
-                        <use className={calv4Styles.f} xlinkHref="#cell"/>
-                        <use className={calv4Styles.g} xlinkHref="#cell"/>
+                        <g className={calv4Styles.a} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.b} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.c} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.d} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.e} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.f} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
+                            <g className={calv4Styles.g} >
+                                <use xlinkHref="#cell" />
+                                <rect className={calv4Styles.celltop} />
+                            </g>
                         </g>
                     </g>
- 
-  
+
+
                 </svg>
                 {/* <!-- ************ smtwtfs ************** --> */}
-                <svg viewBox="0 0 800 650"  filter="url(#innerShad)">
+                <svg viewBox="0 0 800 650" filter="url(#innerShad)">
                     <g className={calv4Styles.smtwtfsPhone}>
                         <polygon points="181.89,17.84 169.33,24.28 156.76,17.84 134.14,17.84 134.14,53.93 204.51,53.93 204.51,17.84" />
                         <polygon points="412.49,54 399.92,47.56 387.36,54 364.74,54 364.74,17.91 435.11,17.91 435.11,54" />
@@ -153,12 +278,13 @@ const CalendarV4 = () => {
                         <path d="M98.71 58H87.28c14.95.07 14.94 22.79 0 22.86H53V58h11.43c-14.95-.07-14.94-22.79 0-22.86h34.28V58z" />
                         <path d="M747 58h-11.43c14.95.07 14.94 22.79 0 22.86h-34.28V58h11.43c-14.95-.07-14.94-22.79 0-22.86H747V58z" />
                     </g>
+
                 </svg>
 
 
-                <text className={calv4Styles.desknote} x="20" y="330">DESK</text>
-                <text className={calv4Styles.tabnote} x="20" y="330">Tablet</text>
-                <text className={calv4Styles.phonenote} x="20" y="330">PHONE</text>
+                <text className={calv4Styles.desknote} x="2%" y="95%">DESK</text>
+                <text className={calv4Styles.tabnote} x="2%" y="95%">Tablet</text>
+                <text className={calv4Styles.phonenote} x="2%" y="95%">PHONE</text>
             </svg>
 
 
