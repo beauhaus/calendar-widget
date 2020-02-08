@@ -1,13 +1,16 @@
-// @import '../../../styles/variables';
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap');
-/* inner SVG viewBox is dimensions of outer * 1.25*/
+
 :root {
- --colWidth: 14.285714%;
- --rowHeight: 6%;
- --rowIncrement: 6%;
- --topMargin: 10%;
- --Lmargin: 0%;
- --colIncrement: 1;
+  --colWidth: 14.285714%;
+  --rowHeight: 6%;
+  --rowIncrement: 6%;
+  --topMargin: 10%;
+  --Lmargin: 0%;
+  --colIncrement: 1;
+
+  --testery: 20%;
+  --testerx: 20%;
+  --testerColor: blue;
 }
 
 
@@ -21,8 +24,9 @@
   align-content: center;
   flex-direction: column;
 }
+
 .sub-container {
-opacity: 1;
+  opacity: 1;
 }
 
 svg {
@@ -46,7 +50,7 @@ svg.outer-svg {
 
 text {
   fill: #000;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .bg {
@@ -55,110 +59,215 @@ text {
   width: 100%;
   height: 100%;
 }
-.celltop {
-  stroke-width: 1;
-    width: var(--colWidth);
-    height: var(--rowHeight); 
-    // stroke: #ddd;  
-}
+
+
 /* determines dimensions of each cell */
-.cellSymbol {
-  rect{
-    width: var(--colWidth);
-    height: var(--rowHeight); 
-  }
-}
+// .cellSymbol {
+//   fill: currentColor;
+
+//   rect {
+//     width: var(--colWidth);
+//     height: var(--rowHeight);
+
+//     &:last-of-type {
+//       stroke: #fff;
+//       stroke-width: 1.5;
+//       fill: transparent;
+//     }
+//   }
+// }
 
 
 .smtwtfs {
   &-phone {
     display: block;
     fill: #bbb;
-    }
+  }
+
   &-tablet {
     display: none;
     fill: #bbb;
-    }
+  }
+
   &-desk {
     display: none;
     fill: #bbbbbb;
-    }
-}
-
-
-/* transparentize */ 
-.rows {
-  rect {
-    fill: transparent;
-  }
-   .celltop {
-           stroke: #ccc;
-      &:hover {
-        stroke: #fff;
-        stroke-width: 1.5;
-      }
-    }
-}
-/* space from top */
-.row-1 {
-  transform: translatey(calc(var(--topMargin) + 0 * var(--rowIncrement))) translatex(var(--Lmargin));
-}
-
-.row-1,
-.row-2,
-.row-3,
-.row-4,
-.row-5,
-.row-6 {
-  .a {
-    transform: translatex(calc((0 * var(--colIncrement)) * var(--colWidth)));
-  }
-
-  .b {
-    transform: translatex(calc((1 * var(--colIncrement)) * var(--colWidth)));
-  }
-
-  .c {
-    transform: translatex(calc((2 * var(--colIncrement)) * var(--colWidth)));
-  }
-
-  .d {
-    transform: translatex(calc((3 * var(--colIncrement)) * var(--colWidth)));
-  }
-
-  .e {
-    transform: translatex(calc((4 * var(--colIncrement)) * var(--colWidth)));
-  }
-
-  .f {
-    transform: translatex(calc((5 * var(--colIncrement)) * var(--colWidth)));
-  }
-
-  .g {
-    transform: translatex(calc((6 * var(--colIncrement)) * var(--colWidth)));
   }
 }
 
 
-.row-2 {
-  transform: translatey(calc(var(--topMargin) + 1 * var(--rowIncrement))) translatex(var(--Lmargin));
+.daycell:nth-child(1) {
+  // transform: translatey(calc(var(--topMargin) + 0 * var(--rowIncrement))) translatex(calc(((0 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+  // transform: translate(calc(((0 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)) ,calc(var(--topMargin) + 0 * var(--rowIncrement)))
 }
 
-.row-3 {
-  transform: translatey(calc(var(--topMargin) + 2 * var(--rowIncrement))) translatex(var(--Lmargin));
+.daycell:nth-child(2) {
+  transform: translatey(calc(var(--topMargin) + 0 * var(--rowIncrement))) translatex(calc(((1 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+
 }
 
-.row-4 {
-  transform: translatey(calc(var(--topMargin) + 3 * var(--rowIncrement))) translatex(var(--Lmargin));
+.daycell:nth-child(3) {
+  transform: translatey(calc(var(--topMargin) + 0 * var(--rowIncrement))) translatex(calc(((2 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+
 }
 
-.row-5 {
-  transform: translatey(calc(var(--topMargin) + 4 * var(--rowIncrement))) translatex(var(--Lmargin));
+.daycell:nth-child(4) {
+  transform: translatey(calc(var(--topMargin) + 0 * var(--rowIncrement))) translatex(calc(((3 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
 }
 
-.row-6 {
-  transform: translatey(calc(var(--topMargin) + 5 * var(--rowIncrement))) translatex(var(--Lmargin));
+.daycell:nth-child(5) {
+  transform: translatey(calc(var(--topMargin) + 0 * var(--rowIncrement))) translatex(calc(((4 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
 }
+
+.daycell:nth-child(6) {
+  transform: translatey(calc(var(--topMargin) + 0 * var(--rowIncrement))) translatex(calc(((5 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(7) {
+  transform: translatey(calc(var(--topMargin) + 0 * var(--rowIncrement))) translatex(calc(((6 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(8) {
+  transform: translatey(calc(var(--topMargin) + 1 * var(--rowIncrement))) translatex(calc(((0 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(9) {
+  transform: translatey(calc(var(--topMargin) + 1 * var(--rowIncrement))) translatex(calc(((1 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(10) {
+  transform: translatey(calc(var(--topMargin) + 1 * var(--rowIncrement))) translatex(calc(((2 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(11) {
+  transform: translatey(calc(var(--topMargin) + 1 * var(--rowIncrement))) translatex(calc(((3 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(12) {
+  transform: translatey(calc(var(--topMargin) + 1 * var(--rowIncrement))) translatex(calc(((4 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(13) {
+  transform: translatey(calc(var(--topMargin) + 1 * var(--rowIncrement))) translatex(calc(((5 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(14) {
+  transform: translatey(calc(var(--topMargin) + 1 * var(--rowIncrement))) translatex(calc(((6 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(15) {
+  transform: translatey(calc(var(--topMargin) + 2 * var(--rowIncrement))) translatex(calc(((0 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(16) {
+  transform: translatey(calc(var(--topMargin) + 2 * var(--rowIncrement))) translatex(calc(((1 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(17) {
+  transform: translatey(calc(var(--topMargin) + 2 * var(--rowIncrement))) translatex(calc(((2 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(18) {
+  transform: translatey(calc(var(--topMargin) + 2 * var(--rowIncrement))) translatex(calc(((3 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(19) {
+  transform: translatey(calc(var(--topMargin) + 2 * var(--rowIncrement))) translatex(calc(((4 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(20) {
+  transform: translatey(calc(var(--topMargin) + 2 * var(--rowIncrement))) translatex(calc(((5 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(21) {
+  transform: translatey(calc(var(--topMargin) + 2 * var(--rowIncrement))) translatex(calc(((6 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(22) {
+  transform: translatey(calc(var(--topMargin) + 3 * var(--rowIncrement))) translatex(calc(((0 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(23) {
+  transform: translatey(calc(var(--topMargin) + 3 * var(--rowIncrement))) translatex(calc(((1 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(24) {
+  transform: translatey(calc(var(--topMargin) + 3 * var(--rowIncrement))) translatex(calc(((2 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(25) {
+  transform: translatey(calc(var(--topMargin) + 3 * var(--rowIncrement))) translatex(calc(((3 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(26) {
+  transform: translatey(calc(var(--topMargin) + 3 * var(--rowIncrement))) translatex(calc(((4 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(27) {
+  transform: translatey(calc(var(--topMargin) + 3 * var(--rowIncrement))) translatex(calc(((5 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(28) {
+  transform: translatey(calc(var(--topMargin) + 3 * var(--rowIncrement))) translatex(calc(((6 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(29) {
+  transform: translatey(calc(var(--topMargin) + 4 * var(--rowIncrement))) translatex(calc(((0 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(30) {
+  transform: translatey(calc(var(--topMargin) + 4 * var(--rowIncrement))) translatex(calc(((1 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(31) {
+  transform: translatey(calc(var(--topMargin) + 4 * var(--rowIncrement))) translatex(calc(((2 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(32) {
+  transform: translatey(calc(var(--topMargin) + 4 * var(--rowIncrement))) translatex(calc(((3 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(33) {
+  transform: translatey(calc(var(--topMargin) + 4 * var(--rowIncrement))) translatex(calc(((4 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(34) {
+  transform: translatey(calc(var(--topMargin) + 4 * var(--rowIncrement))) translatex(calc(((5 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(35) {
+  transform: translatey(calc(var(--topMargin) + 4 * var(--rowIncrement))) translatex(calc(((6 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(36) {
+  transform: translatey(calc(var(--topMargin) + 5 * var(--rowIncrement))) translatex(calc(((0 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(37) {
+  transform: translatey(calc(var(--topMargin) + 5 * var(--rowIncrement))) translatex(calc(((1 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(38) {
+  transform: translatey(calc(var(--topMargin) + 5 * var(--rowIncrement))) translatex(calc(((2 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(39) {
+  transform: translatey(calc(var(--topMargin) + 5 * var(--rowIncrement))) translatex(calc(((3 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(40) {
+  transform: translatey(calc(var(--topMargin) + 5 * var(--rowIncrement))) translatex(calc(((4 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(41) {
+  transform: translatey(calc(var(--topMargin) + 5 * var(--rowIncrement))) translatex(calc(((5 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+.daycell:nth-child(42) {
+  transform: translatey(calc(var(--topMargin) + 5 * var(--rowIncrement))) translatex(calc(((6 * var(--colIncrement)) * var(--colWidth)) + var(--Lmargin)));
+}
+
+
 
 /***************************************************/
 /************* Tablets *****************************/
@@ -168,33 +277,31 @@ text {
   :root {
     --colWidth: 12%;
     --rowHeight: 12%;
-    --rowIncrement: 12.3%;
+    --rowIncrement: 12.1%;
     --topMargin: 17%;
     --Lmargin: 7.16%;
-    --colIncrement: 1.01;
+    --colIncrement: 1;
   }
 
   svg.outer-svg {
     height: 65vh;
     width: 90vw;
   }
- 
-  .daygrp {
-    transform-origin: 100% 0%;
-    transform: scale(1,1) translatex(0%) translateY(0%);
-  }
+
   .smtwtfs {
     &-phone {
       display: none;
     }
+
     &-tablet {
       display: block;
     }
+
     &-desk {
       display: none;
     }
   }
-  
+
 
   /*
  a -0
@@ -247,17 +354,21 @@ text {
   .phonenote {
     opacity: 0;
   }
+
   .smtwtfs {
     &-phone {
       display: none;
     }
+
     &-tablet {
       display: none;
     }
+
     &-desk {
       display: block;
     }
   }
+
   // .bg {
   //   fill: rgba(255, 238, 87, 0.5);
   // }
