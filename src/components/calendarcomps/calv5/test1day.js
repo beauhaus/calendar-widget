@@ -34,12 +34,15 @@ const DayV4 = (props) => {
             sw={props.sw}
             xInc={props.xInc}
             yInc={props.yInc}
+        // viewBox="0 0 320 260"
         >
             <rect fill="url(#vertgrad)" />
             <rect fill="url(#horizgrad)" />
             <rect id="topR" stroke="#bbb" strokeWidth="1" />
-            
-           
+            {/* <svg width="14%" height="6%">
+                <circle cx={"45"} cy={"35"} r="20" stroke="black" stroke-width="4" fill="red" />
+                <rect x="0" y="0" height="100%" width="100%" fill="transparent" stroke="yellow" strokeWidth="2" />
+            </svg> */}
         </StyledCell>
     )
 

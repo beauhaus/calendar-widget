@@ -9,9 +9,6 @@ const daysArr = [...new Array(42)]
 
 const CalendarV4 = () => {
 
-
-    console.log("length: ", daysArr.length);
-
     return (
         <div className={calv4Styles.container}>
 
@@ -42,39 +39,36 @@ const CalendarV4 = () => {
                         <feComposite operator="in" in2="inverse" in="color" result="shadow" />
                         <feComposite in2="SourceGraphic" in="shadow" />
                     </filter>
-                    
+                    <linearGradient id="horizgrad" x1="0%" x2="100%" y1="50%" y2="50%" >
+                        <stop offset="96%" stopOpacity="0" />
+                        <stop offset="1" />
+                    </linearGradient>
+                    <linearGradient id="vertgrad" x1="50%" x2="50%" y1="98%" y2="3%" >
+                        <stop offset="96%" stopOpacity="0" />
+                        <stop offset="1" />
+                    </linearGradient>
+
                 </defs>
-                <rect x="0" y="0" width="100%" height="100%" fill="#ddd" />
 
-                <svg className={calv4Styles.inner} viewBox="0 0 800 650">
-                <defs>
-                <linearGradient id="horizgrad" x1="0%" x2="100%" y1="50%" y2="50%" >
-                    <stop offset="96%" stopOpacity="0" />
-                    <stop offset="1" />
-                </linearGradient>
-                <linearGradient id="vertgrad" x1="50%" x2="50%" y1="98%" y2="3%" >
-                    <stop offset="96%" stopOpacity="0" />
-                    <stop offset="1" />
-                </linearGradient>
-                </defs>
-                    <rect className={calv4Styles.bg} width="100%" height="100%" filter="url(#roughpaper)" />
+                <rect className={calv4Styles.bg} width="100%" height="100%" filter="url(#roughpaper)" />
 
-                        {daysArr.map((dayElem, idx) => {
-                            let xInc = Math.floor(idx/7);
-                            let yInc = Math.floor(idx%7);
-                            return (
-                                <DayV4 
-                                 key={idx}
-                                    payload={idx}
-                                    xlinkHref="#cell" 
-                                    xInc={xInc}
-                                    yInc={yInc}
-                                    sw={10}
-                                    />
-                            )
-                        })}
 
-                </svg>
+                {daysArr.map((dayElem, idx) => {
+                    let xInc = Math.floor(idx / 7);
+                    let yInc = Math.floor(idx % 7);
+                    return (
+                        <DayV4
+                            key={idx}
+                            payload={idx}
+                            xlinkHref="#cell"
+                            xInc={xInc}
+                            yInc={yInc}
+                            sw={10}
+                        />
+                    )
+                })}
+                
+
                 <svg viewBox="0 0 800 650" filter="url(#innerShad)">
                     <g className={calv4Styles.smtwtfsPhone}>
                         <polygon points="181.89,17.84 169.33,24.28 156.76,17.84 134.14,17.84 134.14,53.93 204.51,53.93 204.51,17.84" />
@@ -103,7 +97,6 @@ const CalendarV4 = () => {
                         <path d="M98.71 58H87.28c14.95.07 14.94 22.79 0 22.86H53V58h11.43c-14.95-.07-14.94-22.79 0-22.86h34.28V58z" />
                         <path d="M747 58h-11.43c14.95.07 14.94 22.79 0 22.86h-34.28V58h11.43c-14.95-.07-14.94-22.79 0-22.86H747V58z" />
                     </g>
-
                 </svg>
 
 
