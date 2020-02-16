@@ -26,7 +26,7 @@ const CalendarV4 = () => {
                         </feDiffuseLighting>
                         <feBlend in="SourceGraphic" mode="multiply" />
                     </filter>
-                    <filter id="innerShad">
+                    {/* <filter id="innerShad">
                         <feOffset dy="4" dx="-4" />
                         <feGaussianBlur stdDeviation="3" result="offset-blur" />
                         <feComposite
@@ -38,7 +38,7 @@ const CalendarV4 = () => {
                         <feFlood result="color" floodColor="#000" floodOpacity="1" />
                         <feComposite operator="in" in2="inverse" in="color" result="shadow" />
                         <feComposite in2="SourceGraphic" in="shadow" />
-                    </filter>
+                    </filter> */}
                     <linearGradient id="horizgrad" x1="0%" x2="100%" y1="50%" y2="50%" >
                         <stop offset="96%" stopOpacity="0" />
                         <stop offset="1" />

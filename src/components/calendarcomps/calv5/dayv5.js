@@ -71,8 +71,8 @@ const DayV5 = (props) => {
 
     return (
         <StyledCell className="styled-cell-g">
-            <CellDefs />
-            {/* <defs>
+            {/* <CellDefs /> */}
+            <defs>
         <filter id="txtShad">
             <feDropShadow dx="-10" dy="10" stdDeviation="3" />
         </filter>
@@ -97,7 +97,7 @@ const DayV5 = (props) => {
             <stop offset="96%" stopOpacity="0" />
             <stop offset="1" />
         </linearGradient>
-    </defs> */}
+    </defs>
             {dayGrid.map((elem, idx) => {
                 let xShift = Math.floor(idx % 7);
                 let yShift = Math.floor(idx / 7);
@@ -113,7 +113,8 @@ const DayV5 = (props) => {
 
                 return (
                     cellNum <= 17 ?
-                        <SMTWTFS key={cellNum} cellNum={cellNum} xInc={xInc} yInc={yInc} />
+                        <SMTWTFS key={cellNum} cellNum={cellNum} xInc={xInc} yInc={yInc} /> 
+                        // <h1>hi</h1>
                         :
                         <g key={cellNum} transform={`translate(${xInc},${yInc})`} >
                             <svg width="13%" viewBox="0 951 514 272" preserveAspectRatio="xMidYMid meet">

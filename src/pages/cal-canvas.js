@@ -265,7 +265,7 @@ const CalCanvas = () => {
                     <filter id='scrblend'>
                         <feBlend in="SourceGraphic" mode="screen" />
                     </filter>
-                    <filter id="innerShad">
+                    {/* <filter id="innerShad">
                         <feOffset dy="8" dx="8" />
                         <feGaussianBlur stdDeviation="4" result="offset-blur" />
                         <feComposite
@@ -277,7 +277,7 @@ const CalCanvas = () => {
                         <feFlood result="color" floodColor="#000" floodOpacity="1" />
                         <feComposite operator="in" in2="inverse" in="color" result="shadow" />
                         <feComposite in2="SourceGraphic" in="shadow" />
-                    </filter>
+                    </filter> */}
                     <symbol id="rect-temp">
                         <rect x="0" y="0" width="100%" height="100%" shapeRendering="crispEdges" />
                     </symbol>
