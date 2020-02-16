@@ -5,21 +5,31 @@ import DayV5 from './dayv5'
 
 const CalendarV5 = () => {
 
+  // let idx = 0;
+  // let xShift = Math.floor(idx % 7);
+  //               let yShift = Math.floor(idx / 7);
+  //               let cellNum = Number(`${yShift + 1}${xShift + 1}`);
+
+  //               let xBase = 45;
+  //               let xInc = (xShift * 130) + xBase;
+
+  //               let yBase = 25;
+  //               let yInc = (yShift * 69) + yBase;
+
   return (
     <Test1Styled className="container">
       <div className="sub-container">
-        <svg preserveAspectRatio="none"
+        <svg className="calendar-canvas-svg" preserveAspectRatio="none"
           viewBox="0 0 1000 550"
           width="100%">
-             <filter id='roughpaper'>
-                        <feTurbulence type="turbulence" baseFrequency='0.34' result='noise' numOctaves="1" />
-                        <feDiffuseLighting in='noise' lightingColor='#fff' surfaceScale='1.2' result='light'>
-                            <feDistantLight azimuth='50' elevation='70' />
-                        </feDiffuseLighting>
-                        <feBlend in="SourceGraphic" mode="multiply" />
-                    </filter>
-                    <rect width="100%" height="100%" fill="grey" filter="url(#roughpaper)"/>
-
+          <filter id='roughpaper'>
+            <feTurbulence type="turbulence" baseFrequency='0.34' result='noise' numOctaves="1" />
+            <feDiffuseLighting in='noise' lightingColor='#fff' surfaceScale='1.2' result='light'>
+              <feDistantLight azimuth='50' elevation='70' />
+            </feDiffuseLighting>
+            <feBlend in="SourceGraphic" mode="multiply" />
+          </filter>
+          <rect width="100%" height="100%" fill="grey" filter="url(#roughpaper)" />
           <DayV5 />
         </svg>
         {/* <Queries /> */}
@@ -109,21 +119,3 @@ const Test1Styled = styled.div`
 `
 
 export default CalendarV5;
-
-/*
-      <svg className="container-svg" width="100%" height="100%" viewBox="0 0 1000 500" preserveAspectRatio="none">
-          <rect className="bg" width="100%" height="100%" fill="slategrey" />
-          <circle className="mark-topr" cx="100%" cy="0" r="20" fill="white" />
-          <circle className="mark-botr" cx="100%" cy="100%" r="20" fill="white" />
-        </svg>
-
-
-
-
-
-
-<svg className="cal-canvas-svg" viewBox="0 0 1000 550" preserveAspectRatio="none">
-          <rect width="100%" height="100%" fill="grey" />
-          <g className="calgrid-container">
-
-                */
