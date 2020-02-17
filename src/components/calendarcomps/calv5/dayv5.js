@@ -89,6 +89,8 @@ const DayV5 = (props) => {
                         <g className="cell-svg-wrapper-g" key={cellNum} transform={`translate(${xInc},${yInc})`} >
                             <svg
                              className="cell-svg" 
+                             xmlns="http://www.w3.org/2000/svg"
+
                              width="13%" 
                              viewBox="0 951 514 272" 
                              preserveAspectRatio="xMidYMid meet"
@@ -100,8 +102,15 @@ const DayV5 = (props) => {
                                 twentyFourHours.map((elem, idx) => {
                                     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
                                     return (
-                                        <svg className="evt-payload" key={idx} className={`slot-${idx}`} y={`${ySlotInc}%`} width="100%" height="8%" viewBox="00 0 100 100" preserveAspectRatio="none" >
-                                            <rect fill="#C4B594" />
+                                        <svg className="evt-payload"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        key={idx} className={`slot-${idx}`}
+                                        y={`${ySlotInc}%`} 
+                                        width="100%"
+                                        height="8%"
+                                        viewBox="00 0 100 100" 
+                                        preserveAspectRatio="none" >
+                                            <rect width="100%" fill="#C4B594" />
                                         </svg>
                                     )
                                     })
