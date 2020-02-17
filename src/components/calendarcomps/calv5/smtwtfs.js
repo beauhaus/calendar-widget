@@ -1,9 +1,9 @@
 import React from 'react'
 
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
-const StyledSMTWTFS = styled.svg`
-`
+// const StyledSMTWTFS = styled.svg`
+// `
 const SMTWTFS = ({xInc, yInc, cellNum}) => {
     console.log("x/y inc: ", xInc, yInc);
         switch (cellNum) {

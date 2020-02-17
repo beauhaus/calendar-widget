@@ -1,40 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
-import SMTWTFS from './smtwtfs'
+// import styled from 'styled-components'
+// import SMTWTFS from './smtwtfs'
 
-const StyledCell = styled.g`
-rect {
-    width: 100%;
-    height: 100%;
-}
+import dayv5Styles from './dayv5.module.scss';
 
-.cell-svg {
-    .grid-num {
-        font-weight: 100;
-        font-size: 60px;
-          fill: #fff;
-          filter: url(#txtShad);
-       }
-}
-.innerframe {
-    stroke: #ccc;
-    stroke-width: 6;
-    fill: transparent;
-    &:hover {
-        stroke: #fff;
-        stroke-width: 8;
-    }
-   }
-    .shadPanelV {
-        // fill: blue;
-        fill: url(#vertgrad);
-    }
-    .shadPanelH {
-        fill: url(#horizgrad);
-    }
-   
-
-`
 const CellDefs = () => (
     <defs>
         <filter id="txtShad">
@@ -69,7 +38,7 @@ const DayV5 = (props) => {
     const dayGrid = [...new Array(49)]
 
     return (
-        <StyledCell className="styled-cell-g">
+        <g className={dayv5Styles.dayv5container}>
             <CellDefs />
 
             {dayGrid.map((elem, idx) => {
@@ -86,23 +55,19 @@ const DayV5 = (props) => {
                 let twentyFourHours =  [...new Array(24)]
 
                 return (
-                        <g className="cell-svg-wrapper-g" key={cellNum} transform={`translate(${xInc},${yInc})`} >
+                        <g key={cellNum} transform={`translate(${xInc},${yInc})`} >
                             <svg
-                             className="cell-svg" 
                              xmlns="http://www.w3.org/2000/svg"
-
                              width="13%" 
                              viewBox="0 951 514 272" 
                              preserveAspectRatio="xMidYMid meet"
-                            //  key={cellNum} 
-                            //  transform={`translate(${xInc},${yInc})`} 
                              >
                                 {cellNum< 18? 
                                 console.log("this is true"): 
                                 twentyFourHours.map((elem, idx) => {
                                     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
                                     return (
-                                        <svg className="evt-payload"
+                                        <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         key={idx} className={`slot-${idx}`}
                                         y={`${ySlotInc}%`} 
@@ -115,17 +80,15 @@ const DayV5 = (props) => {
                                     )
                                     })
                                 }
-                                
-
-                                    <rect className="shadPanelV" width="100%" height="100%" fill="url(#vertgrad)" />
-                                    <rect className="shadPanelH" width="100%" height="100%" fill="url(#horizgrad)" />
-                                    <rect className="innerframe" width="100%" height="100%" fill="transparent" stroke="#ccc" strokeWidth="6"/>
-                                    <text className="grid-num" x="3%" y="90%" >{`${cellNum}`}</text>
+                                    <rect className={dayv5Styles.shadPanelV} width="100%" height="100%" fill="url(#vertgrad)" />
+                                    <rect className={dayv5Styles.shadPanelH} width="100%" height="100%" fill="url(#horizgrad)" />
+                                    <rect className={dayv5Styles.innerFrame}  width="100%" height="100%" fill="transparent" stroke="#ccc" strokeWidth="6"/>
+                                    <text className={dayv5Styles.gridNum}  x="3%" y="90%" >{`${cellNum}`}</text>
                             </svg>
                         </g>
                 )
             })}
-        </StyledCell>
+        </g>
     )
 
 }

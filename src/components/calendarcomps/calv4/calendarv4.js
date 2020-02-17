@@ -1,7 +1,6 @@
 import React from 'react'
-import moment from 'gatsby'
+// import moment from 'gatsby'
 import DayV4 from './dayv4'
-
 
 import calv4Styles from './calendarv4.module.scss';
 
