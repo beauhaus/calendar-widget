@@ -8,7 +8,14 @@ rect {
     height: 100%;
 }
 
-
+.cell-svg {
+    .grid-num {
+        font-weight: 100;
+        font-size: 60px;
+          fill: #fff;
+          filter: url(#txtShad);
+       }
+}
 .innerframe {
     stroke: #ccc;
     stroke-width: 6;
@@ -25,12 +32,7 @@ rect {
     .shadPanelH {
         fill: url(#horizgrad);
     }
-   .grid-num {
-    font-weight: 100;
-    font-size: 60px;
-      fill: #fff;
-      filter: url(#txtShad);
-   }
+   
 
 `
 const CellDefs = () => (
