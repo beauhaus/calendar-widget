@@ -114,27 +114,23 @@ const DayV5 = (props) => {
                 let twentyFourHours =  [...new Array(24)]
 
                 return (
-                    // cellNum <= 17 ?
-                    //     <SMTWTFS key={cellNum} cellNum={cellNum} xInc={xInc} yInc={yInc} /> 
-                    //     // <h1>hi</h1>
-                    //     :
                         <g key={cellNum} transform={`translate(${xInc},${yInc})`} >
-                            <svg width="13%" viewBox="0 951 514 272" preserveAspectRatio="xMidYMid meet">
+                            <svg className="cell-svg" width="13%" viewBox="0 951 514 272" preserveAspectRatio="xMidYMid meet">
                                 {cellNum< 18? 
                                 console.log("this is true"): 
-                                console.log("THis is not true")
-                                }
-                                {twentyFourHours.map((elem, idx) => {
+                                twentyFourHours.map((elem, idx) => {
                                     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
                                     return (
-                                        <svg key={idx} className={`slot-${idx}`} y={`${ySlotInc}%`} width="100%" height="8%" viewBox="00 0 100 100" preserveAspectRatio="none" >
+                                        <svg className="evt-payload" key={idx} className={`slot-${idx}`} y={`${ySlotInc}%`} width="100%" height="8%" viewBox="00 0 100 100" preserveAspectRatio="none" >
                                             <rect fill="#C4B594" />
                                         </svg>
                                     )
-                                    })}
+                                    })
+                                }
+                                
 
-                                    <rect className="shadPanelV" />
-                                    <rect className="shadPanelH" />
+                                    <rect className="shadPanelV" width="100%" height="100%"  />
+                                    <rect className="shadPanelH" width="100%" height="100%"  />
                                     <rect className="innerframe" width="100%" height="100%" fill="transparent" stroke="#ccc" strokeWidth="6"/>
                                     <text x="3%" y="90%" fill="white" >{`${cellNum}`}</text>
                             </svg>
