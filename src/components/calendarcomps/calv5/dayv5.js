@@ -80,9 +80,9 @@ const DayV5 = (props) => {
                                     )
                                     })
                                 }
-                                    <rect className={dayv5Styles.shadPanelV} width="100%" height="100%" fill="url(#vertgrad)" />
-                                    <rect className={dayv5Styles.shadPanelH} width="100%" height="100%" fill="url(#horizgrad)" />
-                                    <rect className={dayv5Styles.innerFrame}  width="100%" height="100%" fill="transparent" stroke="#ccc" strokeWidth="6"/>
+                                    <rect className={dayv5Styles.shadPanelV}  />
+                                    <rect className={dayv5Styles.shadPanelH}  />
+                                    <rect className={dayv5Styles.innerFrame}  />
                                     <text className={dayv5Styles.gridNum}  x="3%" y="90%" >{`${cellNum}`}</text>
                             </svg>
                         </g>
