@@ -25,7 +25,7 @@ rect {
     .shadPanelH {
         fill: url(#horizgrad);
     }
-   text.grid-num {
+   .grid-num {
     font-weight: 100;
     font-size: 60px;
       fill: #fff;
@@ -109,7 +109,7 @@ const DayV5 = (props) => {
                                     <rect className="shadPanelV" width="100%" height="100%" fill="url(#vertgrad)" />
                                     <rect className="shadPanelH" width="100%" height="100%" fill="url(#horizgrad)" />
                                     <rect className="innerframe" width="100%" height="100%" fill="transparent" stroke="#ccc" strokeWidth="6"/>
-                                    <text className="grid-num" x="3%" y="90%" fill="white" >{`${cellNum}`}</text>
+                                    <text className="grid-num" x="3%" y="90%" fill="#fff" >{`${cellNum}`}</text>
                             </svg>
                         </g>
                 )

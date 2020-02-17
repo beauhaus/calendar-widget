@@ -86,10 +86,10 @@ const Test1Styled = styled.div`
 
     /******TAB******/
 @media screen and (min-width: 668px) {
-  // .sub-container {
-  //   margin: 10vh auto;
-  //   width: 80vw;
-  //   height: 60vh;
+  .sub-container {
+    margin: 10vh auto;
+    width: 80vw;
+    height: 60vh;
   //   max-width: 1024px;
   //   max-height: 550px;
   //   position: relative;
@@ -106,7 +106,7 @@ const Test1Styled = styled.div`
       
   //   }
 
-  // }
+  }
 
 }
 /******DESK******/
