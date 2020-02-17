@@ -71,7 +71,8 @@ const DayV5 = (props) => {
 
     return (
         <StyledCell className="styled-cell-g">
-            {/* <CellDefs /> */}
+            <CellDefs />
+{/* 
             <defs>
         <filter id="txtShad">
             <feDropShadow dx="-10" dy="10" stdDeviation="3" />
@@ -98,6 +99,7 @@ const DayV5 = (props) => {
             <stop offset="1" />
         </linearGradient>
     </defs>
+            */}
             {dayGrid.map((elem, idx) => {
                 let xShift = Math.floor(idx % 7);
                 let yShift = Math.floor(idx / 7);
@@ -112,13 +114,16 @@ const DayV5 = (props) => {
                 let twentyFourHours =  [...new Array(24)]
 
                 return (
-                    cellNum <= 17 ?
-                        <SMTWTFS key={cellNum} cellNum={cellNum} xInc={xInc} yInc={yInc} /> 
-                        // <h1>hi</h1>
-                        :
+                    // cellNum <= 17 ?
+                    //     <SMTWTFS key={cellNum} cellNum={cellNum} xInc={xInc} yInc={yInc} /> 
+                    //     // <h1>hi</h1>
+                    //     :
                         <g key={cellNum} transform={`translate(${xInc},${yInc})`} >
                             <svg width="13%" viewBox="0 951 514 272" preserveAspectRatio="xMidYMid meet">
-
+                                {cellNum< 18? 
+                                console.log("this is true"): 
+                                console.log("THis is not true")
+                                }
                                 {twentyFourHours.map((elem, idx) => {
                                     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
                                     return (
