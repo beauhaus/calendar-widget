@@ -7,10 +7,7 @@ rect {
     width: 100%;
     height: 100%;
 }
-// .smtwtfs {
-//     filter: url(#innerShad);
-//     fill: #ddd;
-// }
+
 
 .innerframe {
     stroke: #ccc;
@@ -28,7 +25,7 @@ rect {
     .shadPanelH {
         fill: url(#horizgrad);
     }
-   text {
+   text.grid-num {
     font-weight: 100;
     font-size: 60px;
       fill: #fff;
@@ -72,34 +69,7 @@ const DayV5 = (props) => {
     return (
         <StyledCell className="styled-cell-g">
             <CellDefs />
-{/* 
-            <defs>
-        <filter id="txtShad">
-            <feDropShadow dx="-10" dy="10" stdDeviation="3" />
-        </filter>
-        <filter id="innerShad">
-            <feOffset dy="4" dx="-6" />
-            <feGaussianBlur stdDeviation="3" result="offset-blur" />
-            <feComposite
-                operator="out"
-                in2="offset-blur"
-                in="SourceGraphic"
-                result="inverse"
-            />
-            <feFlood result="color" floodColor="#000" floodOpacity="1" />
-            <feComposite operator="in" in2="inverse" in="color" result="shadow" />
-            <feComposite in2="SourceGraphic" in="shadow" />
-        </filter>
-        <linearGradient id="horizgrad" x1="0%" x2="100%" y1="50%" y2="50%" >
-            <stop offset="96%" stopOpacity="0" />
-            <stop offset="1" />
-        </linearGradient>
-        <linearGradient id="vertgrad" x1="50%" x2="50%" y1="98%" y2="3%" >
-            <stop offset="96%" stopOpacity="0" />
-            <stop offset="1" />
-        </linearGradient>
-    </defs>
-            */}
+
             {dayGrid.map((elem, idx) => {
                 let xShift = Math.floor(idx % 7);
                 let yShift = Math.floor(idx / 7);
@@ -114,8 +84,15 @@ const DayV5 = (props) => {
                 let twentyFourHours =  [...new Array(24)]
 
                 return (
-                        <g key={cellNum} transform={`translate(${xInc},${yInc})`} >
-                            <svg className="cell-svg" width="13%" viewBox="0 951 514 272" preserveAspectRatio="xMidYMid meet">
+                        <g className="cell-svg-wrapper-g" key={cellNum} transform={`translate(${xInc},${yInc})`} >
+                            <svg
+                             className="cell-svg" 
+                             width="13%" 
+                             viewBox="0 951 514 272" 
+                             preserveAspectRatio="xMidYMid meet"
+                            //  key={cellNum} 
+                            //  transform={`translate(${xInc},${yInc})`} 
+                             >
                                 {cellNum< 18? 
                                 console.log("this is true"): 
                                 twentyFourHours.map((elem, idx) => {
@@ -132,7 +109,7 @@ const DayV5 = (props) => {
                                     <rect className="shadPanelV" width="100%" height="100%" fill="url(#vertgrad)" />
                                     <rect className="shadPanelH" width="100%" height="100%" fill="url(#horizgrad)" />
                                     <rect className="innerframe" width="100%" height="100%" fill="transparent" stroke="#ccc" strokeWidth="6"/>
-                                    <text x="3%" y="90%" fill="white" >{`${cellNum}`}</text>
+                                    <text className="grid-num" x="3%" y="90%" fill="white" >{`${cellNum}`}</text>
                             </svg>
                         </g>
                 )
