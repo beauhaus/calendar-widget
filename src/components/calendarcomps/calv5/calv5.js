@@ -19,7 +19,9 @@ const CalendarV5 = () => {
   return (
     <Test1Styled className="container">
       <div className="sub-container">
-        <svg className="calendar-canvas-svg" preserveAspectRatio="none"
+        <svg className="calendar-canvas-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
           viewBox="0 0 1000 550"
           width="100%">
           <filter id='roughpaper'>
