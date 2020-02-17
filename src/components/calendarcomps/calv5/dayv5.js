@@ -129,8 +129,8 @@ const DayV5 = (props) => {
                                 }
                                 
 
-                                    <rect className="shadPanelV" width="100%" height="100%"  />
-                                    <rect className="shadPanelH" width="100%" height="100%"  />
+                                    <rect className="shadPanelV" width="100%" height="100%" fill="url(#vertgrad)" />
+                                    <rect className="shadPanelH" width="100%" height="100%" fill="url(#horizgrad)" />
                                     <rect className="innerframe" width="100%" height="100%" fill="transparent" stroke="#ccc" strokeWidth="6"/>
                                     <text x="3%" y="90%" fill="white" >{`${cellNum}`}</text>
                             </svg>
