@@ -1,6 +1,6 @@
 import React from 'react'
 // import styled from 'styled-components'
-// import SMTWTFS from './smtwtfs'
+import SMTWTFS from './smtwtfs'
 
 import dayv5Styles from './dayv5.module.scss';
 
@@ -38,7 +38,7 @@ const DayV5 = (props) => {
     const dayGrid = [...new Array(49)]
 
     return (
-        <g className={dayv5Styles.dayv5container}>
+        <>
             <CellDefs />
 
             {dayGrid.map((elem, idx) => {
@@ -57,19 +57,26 @@ const DayV5 = (props) => {
                 return (
                         <g key={cellNum} transform={`translate(${xInc},${yInc})`} >
                             <svg
+                            className={dayv5Styles.dayv5container}
                              xmlns="http://www.w3.org/2000/svg"
                              width="13%" 
                              viewBox="0 951 514 272" 
                              preserveAspectRatio="xMidYMid meet"
                              >
                                 {cellNum< 18? 
-                                console.log("this is true"): 
+                                <SMTWTFS 
+                                key={cellNum} 
+                                cellNum={cellNum} 
+                                yInc={yInc} 
+                                xInc={xInc
+                                }/>: 
                                 twentyFourHours.map((elem, idx) => {
                                     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
                                     return (
                                         <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        key={idx} className={`slot-${idx}`}
+                                        key={idx}
+                                        className={`slot-${idx}`}
                                         y={`${ySlotInc}%`} 
                                         width="100%"
                                         height="8%"
@@ -78,61 +85,19 @@ const DayV5 = (props) => {
                                             <rect width="100%" fill="#C4B594" />
                                         </svg>
                                     )
-                                    })
-                                }
-                                    <rect className={dayv5Styles.shadPanelV}  />
-                                    <rect className={dayv5Styles.shadPanelH}  />
-                                    <rect className={dayv5Styles.innerFrame}  />
-                                    <text className={dayv5Styles.gridNum}  x="3%" y="90%" >{`${cellNum}`}</text>
+                                })
+                            }
+                            <rect className={dayv5Styles.shadPanelV}  />
+                            <rect className={dayv5Styles.shadPanelH}  />
+                            <rect className={dayv5Styles.innerFrame}  />
+                            <text className={dayv5Styles.gridNum}  x="3%" y="90%" >{`${cellNum}`}</text>
                             </svg>
                         </g>
                 )
             })}
-        </g>
+        </>
     )
 
 }
 
 export default DayV5;
-
-/*
-<rect width="513" height="99" x=".5" y=".5" fill="#f7931e"/>
-  <g>
-    <rect width="513" height="99" x=".5" y="108.5" fill="#ff7bac"/>
-  </g>
-
-
-
-
-
-                                    <svg className="slot-0" y="4.16%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#94C1B7" />
-                                    </svg>
-                                    <svg className="slot-1" y="20%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#C19494" />
-                                    </svg>
-                                    <svg className="slot-2" y="40%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#9498C2" />
-                                    </svg>
-                                    <svg className="slot-3" y="60%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#E3B464" />
-                                    </svg>
-                                    <svg className="slot-4" y="80%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#C4B594" />
-                                    </svg>
-                                    <svg className="slot-5" y="4.16%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#94C1B7" />
-                                    </svg>
-                                    <svg className="slot-6" y="20%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#C19494" />
-                                    </svg>
-                                    <svg className="slot-7" y="40%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#9498C2" />
-                                    </svg>
-                                    <svg className="slot-8" y="60%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#E3B464" />
-                                    </svg>
-                                    <svg className="slot-9" y="80%" width="100%" height="20%" preserveAspectRatio="none">
-                                        <rect fill="#C4B594" />
-                                    </svg>
-  */
