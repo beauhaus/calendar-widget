@@ -62,13 +62,12 @@ const DayV5 = (props) => {
                              width="13%" 
                              viewBox="0 951 514 272" 
                              preserveAspectRatio="xMidYMid meet"
-                             >
+                              >
                                 {cellNum< 18? 
                                 <SMTWTFS 
                                 key={cellNum} 
-                                cellNum={cellNum} 
-                                yInc={yInc} 
-                                xInc={xInc}/>
+                                cellNum={cellNum}
+                                />
                                 :
                                 twentyFourHours.map((elem, idx) => {
                                     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
