@@ -38,7 +38,7 @@ const DayV5 = (props) => {
     const dayGrid = [...new Array(49)]
 
     return (
-        <>
+        <g>
             <CellDefs />
 
             {dayGrid.map((elem, idx) => {
@@ -68,8 +68,8 @@ const DayV5 = (props) => {
                                 key={cellNum} 
                                 cellNum={cellNum} 
                                 yInc={yInc} 
-                                xInc={xInc
-                                }/>: 
+                                xInc={xInc}/>
+                                :
                                 twentyFourHours.map((elem, idx) => {
                                     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
                                     return (
@@ -95,7 +95,7 @@ const DayV5 = (props) => {
                         </g>
                 )
             })}
-        </>
+        </g>
     )
 
 }

@@ -3,10 +3,8 @@
 .month-container {
  & ~ rect, & ~ text {
    display: none;
- }  
+ }
+ path {
+   filter: url(#innerShad);
+ }
 }
-
-
-
-
-
