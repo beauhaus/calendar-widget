@@ -58,11 +58,10 @@ const DayV5 = (props) => {
                         <g key={cellNum} transform={`translate(${xInc},${yInc})`} >
                             <svg
                             className={dayv5Styles.dayv5container}
-                             xmlns="http://www.w3.org/2000/svg"
                              width="13%" 
                              viewBox="0 951 514 272" 
                              preserveAspectRatio="xMidYMid meet"
-                              >
+                            >
                                 {cellNum< 18? 
                                 <SMTWTFS 
                                 key={cellNum} 
@@ -73,7 +72,6 @@ const DayV5 = (props) => {
                                     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
                                     return (
                                         <svg
-                                        xmlns="http://www.w3.org/2000/svg"
                                         key={idx}
                                         className={`slot-${idx}`}
                                         y={`${ySlotInc}%`} 
