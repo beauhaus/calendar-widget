@@ -7,7 +7,7 @@ import dayv5Styles from './dayv5.module.scss';
 import EvtSlots from './evtslots';
 import { calendarUtils , filledArray} from '../utils/date-utils'
 
-filledArray("2020-08-22")
+// filledArray("2020-08-22")
 // var currentMonthArray = calendarUtils("currentMonthArray")
 
 const CellDefs = () => (
@@ -42,12 +42,15 @@ const CellDefs = () => (
 const DayV5 = (props) => {
     // console.log("p>dV5: ", props)
     const dayGrid = [...new Array(49)]
-    // var dayGrid = new Array(49);
+    var selectedDate = "2020-08-22";
+    const gridArray = filledArray(selectedDate)
+
+    // console.log("gArr: ", gridArray)
     return (
         <g>
             <CellDefs />
 
-            {dayGrid.map((elem, idx) => {
+            {gridArray.map((elem, idx) => {
                 let xShift = Math.floor(idx % 7);
                 let yShift = Math.floor(idx / 7);
                 let gridNum = idx - 6;
@@ -59,7 +62,7 @@ const DayV5 = (props) => {
                 let yInc = (yShift * 69) + yBase;
 
                 let twentyFourHours = [...new Array(2)]
-
+                
                 return (
                     <g key={gridNum} transform={`translate(${xInc},${yInc})`} >
                         <svg
@@ -68,19 +71,26 @@ const DayV5 = (props) => {
                             viewBox="0 951 514 272"
                             preserveAspectRatio="xMidYMid meet"
                         >
-                            {gridNum < 1 ?
+                            {(elem.desc==="dayIcon")  &&
                                 <SMTWTFS
+                                    content={elem.content}
                                     key={gridNum}
                                     gridNum={gridNum}
-                                />
-                                :
-                                twentyFourHours.map((elem, idx) => {
-                                    let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
-                                    return (
+                                />}
+                {elem.content.events!==undefined && 
+                elem.content.events.map((elem, idx)=>{
+                    let ySlotInc = 4 * idx;
+                    return (
+                        <EvtSlots key={idx} fill={elem} ySlotInc={ySlotInc} />
+                    )})
+                }
+                                {/* // twentyFourHours.map((elem, idx) => {
+                                //     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
+                                //     return (
                                         <EvtSlots key={idx} ySlotInc={ySlotInc} />
-                                    )
-                                })
-                            }
+                                //     )
+                                // })
+                            } */}
                             <rect className={dayv5Styles.shadPanelV} />
                             <rect className={dayv5Styles.shadPanelH} />
                             <rect className={dayv5Styles.innerFrame} />

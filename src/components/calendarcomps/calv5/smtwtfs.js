@@ -2,7 +2,8 @@ import React from 'react'
 
 import monthStyles from './smtwtfs.module.scss';
 
-const SMTWTFS = ({gridNum}) => {
+const SMTWTFS = ({gridNum, content}) => {
+    console.log("gridnum & content: ", gridNum, "-", content)
     const renderPath = (param) => {
         switch (param) {
             case -6:

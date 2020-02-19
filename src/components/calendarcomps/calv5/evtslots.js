@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EvtSlots = ({idx,ySlotInc}) => {
+const EvtSlots = ({idx,ySlotInc, fill}) => {
 
     return (
         <svg
@@ -11,7 +11,7 @@ const EvtSlots = ({idx,ySlotInc}) => {
         height="8%"
         viewBox="0 0 100 100" 
         preserveAspectRatio="none" >
-            <rect width="100%" fill="#C4B594" />
+            <rect width="100%" fill={fill} />
         </svg>
     )
 

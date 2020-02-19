@@ -37,16 +37,19 @@ export const calendarUtils = (param) => {
 
 
 export const filledArray = (selectedMonth) => {
-   
-    const prevMonthBufferLen = moment(selectedMonth).startOf("month").format('d') * 1; // parsedToInt
-    const prevMonthBuffArray = new Array(prevMonthBufferLen).fill({ 'content': null }); // [{content: null}, {content: null}]
+    // console.log("selMon: ", moment(selectedMonth).startOf("month").format('d')*1+7) // 13
+
+    const prevMonthBufferLen = moment(selectedMonth).startOf("month").format('d')*1+7; // parsedToInt
+
+    const prevMonthBuffArray = new Array(prevMonthBufferLen).fill({ 'content': "dayIcon", "desc":"dayIcon"  }); // [{content: null}, {content: null}]
 
     const daysInMonth = moment(selectedMonth).daysInMonth();
     const selectedMonthDaysArray = new Array(daysInMonth).fill({"content": {"events": ["red", "yellow", "green"]}})
 
-    const endBuffer = 42 - (daysInMonth + prevMonthBufferLen);
-    const nxtMonthBuffArray = new Array(endBuffer).fill({ 'content': null }); // [{content: null}, {content: null}]
-
+    const endBuffer = 49 - (daysInMonth + prevMonthBufferLen);
+    
+    const nxtMonthBuffArray = new Array(endBuffer).fill({ 'content': "nxtMonthBuffer" }); // [{content: null}, {content: null}]
+    
     const filledArray = [...prevMonthBuffArray, ...selectedMonthDaysArray, ...nxtMonthBuffArray];
     // console.table(filledArray)
     return filledArray;
