@@ -19,7 +19,7 @@ const CalendarV5 = () => {
             </feDiffuseLighting>
             <feBlend in="SourceGraphic" mode="multiply" />
           </filter>
-          <rect width="100%" height="100%" fill="grey" filter="url(#roughpaper)" />
+          <rect width="100%" height="100%" fill="#949494" filter="url(#roughpaper)" />
           <DayV5 />
         </svg>
         {/* <Queries /> */}

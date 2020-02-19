@@ -53,7 +53,7 @@ const DayV5 = (props) => {
             {gridArray.map((elem, idx) => {
                 let xShift = Math.floor(idx % 7);
                 let yShift = Math.floor(idx / 7);
-                let gridNum = idx - 6;
+
 
                 let xBase = 45;
                 let xInc = (xShift * 130) + xBase;
@@ -62,37 +62,36 @@ const DayV5 = (props) => {
                 let yInc = (yShift * 69) + yBase;
 
                 return (
-                    <g key={gridNum} transform={`translate(${xInc},${yInc})`} >
-                        <svg
-                            className={dayv5Styles.dayv5container}
-                            width="13%"
-                            viewBox="0 951 514 272"
-                            preserveAspectRatio="xMidYMid meet"
-                        >
-                            {(elem.desc === "dayIcon") &&
-                                <SMTWTFS
-                                    content={elem.desc}
-                                    key={gridNum}
-                                    gridNum={gridNum}
-                                />}
-                               
-                            {elem.content !== undefined &&
+                    <g key={idx} transform={`translate(${xInc},${yInc})`} >
+                        {(elem.desc === "dayIcon") &&
+                            <SMTWTFS
+                                content={elem.desc}
+                                key={idx}
+                                dayNum={idx+1}
+                            />}
+                            
+                            {(elem.desc === "days") &&
+                            <svg
+                                className={dayv5Styles.dayv5container}
+                                width="13%"
+                                viewBox="0 951 514 272"
+                                preserveAspectRatio="xMidYMid meet"
+                            >
+                                {elem.content !== undefined &&
                                 elem.content.events.map((elem, idx) => {
-                                    let ySlotInc = 4 * idx;
+                                    let ySlotInc = 5 * idx; //this num was 4
                                     return (
-                                        <g key={idx}>
-                                            <EvtSlots  fill={elem} ySlotInc={ySlotInc} />
-                                            <rect className={dayv5Styles.shadPanelV} />
-                                            <rect className={dayv5Styles.shadPanelH} />
-                                            <rect className={dayv5Styles.innerFrame} />
-                                            <text className={dayv5Styles.gridNum} x="3%" y="90%" >{`${gridNum}`}</text>
-                                        </g>
+                                        <EvtSlots key={idx} fill={elem} ySlotInc={ySlotInc} />
                                     )
                                 })
                             }
+                                <rect className={dayv5Styles.shadPanelV} />
+                                <rect className={dayv5Styles.shadPanelH} />
+                                <rect className={dayv5Styles.innerFrame} />
+                                <text className={dayv5Styles.gridNum} x="3%" y="90%" >{`${elem.dayNum}`}</text>
 
-                            
-                        </svg>
+                            </svg>
+                            }
                     </g>
                 )
             })}

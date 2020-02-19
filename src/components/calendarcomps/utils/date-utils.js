@@ -44,8 +44,8 @@ export const filledArray = (selectedMonth) => {
     const prevMonthBuffArray = new Array(prevMonthBufferLen).fill({ 'desc': "prevMonthBuffer"});
 
     const daysInMonth = moment(selectedMonth).daysInMonth();
-    const selectedMonthDaysArray = new Array(daysInMonth).fill({"content": {"events": ["red", "yellow", "green"]}})
 
+    const selectedMonthDaysArray = [...new Array(daysInMonth)].map((item, idx)=> ({'desc': "days","dayNum": `${idx+1}`,"content": {"events": ["#000", "#C19494", "#94C1B7"]}}));
     const endBuffer = 49 - (daysInMonth + prevMonthBufferLen);
     
     const nxtMonthBuffArray = new Array(endBuffer).fill({ 'desc': "nxtMonthBuffer" }); // [{content: null}, {content: null}]

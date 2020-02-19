@@ -10,7 +10,8 @@ const EvtSlots = ({idx,ySlotInc, fill}) => {
         width="100%"
         height="8%"
         viewBox="0 0 100 100" 
-        preserveAspectRatio="none" >
+        preserveAspectRatio="none"
+         >
             <rect width="100%" fill={fill} />
         </svg>
     )
