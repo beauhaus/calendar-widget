@@ -1,8 +1,14 @@
 import React from 'react'
-// import styled from 'styled-components'
+
 import SMTWTFS from './smtwtfs'
 
+
 import dayv5Styles from './dayv5.module.scss';
+import EvtSlots from './evtslots';
+import { calendarUtils , filledArray} from '../utils/date-utils'
+
+filledArray("2020-08-22")
+// var currentMonthArray = calendarUtils("currentMonthArray")
 
 const CellDefs = () => (
     <defs>
@@ -36,7 +42,7 @@ const CellDefs = () => (
 const DayV5 = (props) => {
     // console.log("p>dV5: ", props)
     const dayGrid = [...new Array(49)]
-
+    // var dayGrid = new Array(49);
     return (
         <g>
             <CellDefs />
@@ -44,7 +50,7 @@ const DayV5 = (props) => {
             {dayGrid.map((elem, idx) => {
                 let xShift = Math.floor(idx % 7);
                 let yShift = Math.floor(idx / 7);
-                let cellNum = Number(`${yShift + 1}${xShift + 1}`);
+                let gridNum = idx - 6;
 
                 let xBase = 45;
                 let xInc = (xShift * 130) + xBase;
@@ -52,49 +58,40 @@ const DayV5 = (props) => {
                 let yBase = 25;
                 let yInc = (yShift * 69) + yBase;
 
-                let twentyFourHours =  [...new Array(24)]
+                let twentyFourHours = [...new Array(2)]
 
                 return (
-                        <g key={cellNum} transform={`translate(${xInc},${yInc})`} >
-                            <svg
+                    <g key={gridNum} transform={`translate(${xInc},${yInc})`} >
+                        <svg
                             className={dayv5Styles.dayv5container}
-                             width="13%" 
-                             viewBox="0 951 514 272" 
-                             preserveAspectRatio="xMidYMid meet"
-                            >
-                                {cellNum< 18? 
-                                <SMTWTFS 
-                                key={cellNum} 
-                                cellNum={cellNum}
+                            width="13%"
+                            viewBox="0 951 514 272"
+                            preserveAspectRatio="xMidYMid meet"
+                        >
+                            {gridNum < 1 ?
+                                <SMTWTFS
+                                    key={gridNum}
+                                    gridNum={gridNum}
                                 />
                                 :
                                 twentyFourHours.map((elem, idx) => {
                                     let ySlotInc = 4 * idx;  // TODO: 4.16++ ?
                                     return (
-                                        <svg
-                                        key={idx}
-                                        className={`slot-${idx}`}
-                                        y={`${ySlotInc}%`} 
-                                        width="100%"
-                                        height="8%"
-                                        viewBox="00 0 100 100" 
-                                        preserveAspectRatio="none" >
-                                            <rect width="100%" fill="#C4B594" />
-                                        </svg>
+                                        <EvtSlots key={idx} ySlotInc={ySlotInc} />
                                     )
                                 })
                             }
-                            <rect className={dayv5Styles.shadPanelV}  />
-                            <rect className={dayv5Styles.shadPanelH}  />
-                            <rect className={dayv5Styles.innerFrame}  />
-                            <text className={dayv5Styles.gridNum}  x="3%" y="90%" >{`${cellNum}`}</text>
-                            </svg>
-                        </g>
+                            <rect className={dayv5Styles.shadPanelV} />
+                            <rect className={dayv5Styles.shadPanelH} />
+                            <rect className={dayv5Styles.innerFrame} />
+                            <text className={dayv5Styles.gridNum} x="3%" y="90%" >{`${gridNum}`}</text>
+                        </svg>
+                    </g>
                 )
             })}
         </g>
     )
-
 }
+
 
 export default DayV5;

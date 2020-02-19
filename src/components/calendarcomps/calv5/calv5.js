@@ -22,7 +22,7 @@ const CalendarV5 = () => {
           <rect width="100%" height="100%" fill="grey" filter="url(#roughpaper)" />
           <DayV5 />
         </svg>
-        <Queries />
+        {/* <Queries /> */}
       </div>
     </div>
   )
