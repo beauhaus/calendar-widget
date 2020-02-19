@@ -37,21 +37,23 @@ export const calendarUtils = (param) => {
 
 
 export const filledArray = (selectedMonth) => {
-    // console.log("selMon: ", moment(selectedMonth).startOf("month").format('d')*1+7) // 13
+    // console.log("selMon: ", moment(selectedMonth).startOf("month").format('d')*1+7) // 13\
+    const dayIconRow = new Array(7).fill({"desc": "dayIcon"}) // 7
 
-    const prevMonthBufferLen = moment(selectedMonth).startOf("month").format('d')*1+7; // parsedToInt
-
-    const prevMonthBuffArray = new Array(prevMonthBufferLen).fill({ 'content': "dayIcon", "desc":"dayIcon"  }); // [{content: null}, {content: null}]
+    const prevMonthBufferLen = moment(selectedMonth).startOf("month").format('d')*1; // parsedToInt
+    const prevMonthBuffArray = new Array(prevMonthBufferLen).fill({ 'desc': "prevMonthBuffer"});
 
     const daysInMonth = moment(selectedMonth).daysInMonth();
     const selectedMonthDaysArray = new Array(daysInMonth).fill({"content": {"events": ["red", "yellow", "green"]}})
 
     const endBuffer = 49 - (daysInMonth + prevMonthBufferLen);
     
-    const nxtMonthBuffArray = new Array(endBuffer).fill({ 'content': "nxtMonthBuffer" }); // [{content: null}, {content: null}]
+    const nxtMonthBuffArray = new Array(endBuffer).fill({ 'desc': "nxtMonthBuffer" }); // [{content: null}, {content: null}]
     
-    const filledArray = [...prevMonthBuffArray, ...selectedMonthDaysArray, ...nxtMonthBuffArray];
-    // console.table(filledArray)
+    const filledArray = [...dayIconRow, ...prevMonthBuffArray, ...selectedMonthDaysArray, ...nxtMonthBuffArray];
+    console.log("fAlen: ", filledArray.length);
+
+    console.log(filledArray)
     return filledArray;
 }
 
