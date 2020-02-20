@@ -22,14 +22,16 @@ const CalendarV5 = () => {
           <rect width="100%" height="100%" fill="#949494" filter="url(#roughpaper)" />
           <DayV5 />
           <g className={calv5Styles.arrowRt} >
-            <svg width="5%" viewBox="0 0 100 100">
-              <polygon fill="#af3708" points="0,0 100,0 100,100" />
-            </svg>
+          <svg width="3%" viewBox="0 0 50 100" preserveAspectRatio="xMidYMid meet">
+  <polygon  fill="transparent" points="0,100 50,50 0,0"/>
+  <path fill="#555" d="M0 0v100l50-50L0 0zm8 20l30 30L8 80V20z"/>
+</svg>
           </g>
           <g className={calv5Styles.arrowLt}>
-            <svg width="4.5%" viewBox="0 0 100 100">
-            <polygon fill="#af3708" points="0,0 0,100 100,100" />
-            </svg>
+          <svg  width="3%" viewBox="0 0 50 100">
+  <polygon fill="transparent" points="50,100 0,50 50,0"/>
+  <path fill="#555" d="M50 0v100L0 50 50 0zm-8 20L12 50l30 30V20z"/>
+</svg>
           </g>
         </svg>
         {/* <Queries /> */}
