@@ -21,6 +21,16 @@ const CalendarV5 = () => {
           </filter>
           <rect width="100%" height="100%" fill="#949494" filter="url(#roughpaper)" />
           <DayV5 />
+          <g className={calv5Styles.arrowRt} >
+            <svg width="5%" viewBox="0 0 100 100">
+              <polygon fill="#af3708" points="0,0 100,0 100,100" />
+            </svg>
+          </g>
+          <g className={calv5Styles.arrowLt}>
+            <svg width="4.5%" viewBox="0 0 100 100">
+            <polygon fill="#af3708" points="0,0 0,100 100,100" />
+            </svg>
+          </g>
         </svg>
         {/* <Queries /> */}
       </div>

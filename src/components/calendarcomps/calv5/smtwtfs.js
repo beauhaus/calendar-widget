@@ -38,7 +38,7 @@ const SMTWTFS = ({ dayNum }) => {
             viewBox="0 951 514 272"
             preserveAspectRatio="xMidYMid meet"
         >
-            <svg className={monthStyles.monthContainer} height="80%" viewBox="0 0 60 60" >
+            <svg className={monthStyles.monthContainer} height="60%" viewBox="0 0 60 60" >
                 {renderPath(dayNum)}
             </svg>
         </svg>
