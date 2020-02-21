@@ -1,10 +1,39 @@
-import React from 'react'
+import React , {useState}  from 'react'
 import calv5Styles from './calv5.module.scss';
 import Queries from '../queries'
 import DayV5 from './dayv5'
+import calv5Nav from './calv5nav'
+import CalV5Nav from './calv5nav';
+import moment from 'moment'
+import {  filledArray } from '../utils/date-utils'
+import {  monthArrayMaker } from '../utils/month-array-maker'
+
+
 
 const CalendarV5 = () => {
+  const [selectedDate, setSelectedDate] = useState(moment().format('YYYY-MM-DD'))
 
+    /********* Month CONTROL ********************************/
+    const incrementMonth = () => {
+      let addMonth = moment(selectedDate).add(1, 'month').format("YYYY-MM-DD");
+      console.log("INC!")
+      // return setSelectedDate(addMonth)
+  }
+
+  const decrementMonth = () => {
+      console.log("Dec!!")
+      let subtractMonth = moment(selectedDate).subtract(1, 'month').format("YYYY-MM-DD");
+      // return setSelectedDate(subtractMonth)
+  }
+  /****************************************************************/
+      var testDate = "2020-08-22";
+
+      const gridArray = filledArray(testDate)
+      console.log("gridArr is array?: ", gridArray.length)
+      // gridArray.map(elem => console.log("elem: ", elem))
+      // const gridArray2 = monthArrayMaker(testDate)
+      // console.log("mAm: ", gridArray2)
+            
   return (
     <div className={calv5Styles.calv5Container}>
       <div className={calv5Styles.calv5Subcontainer}>
@@ -20,19 +49,12 @@ const CalendarV5 = () => {
             <feBlend in="SourceGraphic" mode="multiply" />
           </filter>
           <rect width="100%" height="100%" fill="#949494" filter="url(#roughpaper)" />
-          <DayV5 />
-          <g className={calv5Styles.arrowRt} >
-          <svg width="3%" viewBox="0 0 50 100" preserveAspectRatio="xMidYMid meet">
-  <polygon  fill="transparent" points="0,100 50,50 0,0"/>
-  <path fill="#555" d="M0 0v100l50-50L0 0zm8 20l30 30L8 80V20z"/>
-</svg>
-          </g>
-          <g className={calv5Styles.arrowLt}>
-          <svg  width="3%" viewBox="0 0 50 100">
-  <polygon fill="transparent" points="50,100 0,50 50,0"/>
-  <path fill="#555" d="M50 0v100L0 50 50 0zm-8 20L12 50l30 30V20z"/>
-</svg>
-          </g>
+          <DayV5 gridArray={gridArray}/>
+          <CalV5Nav
+          decMonth={decrementMonth}
+          incMonth={incrementMonth}
+          selectedDate={selectedDate}
+          />
         </svg>
         {/* <Queries /> */}
       </div>

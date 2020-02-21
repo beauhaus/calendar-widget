@@ -1,0 +1,19 @@
+.nav-container {
+  .arrow-rt {
+    transform: translatex(96.5%);
+
+    &>polygon:hover {
+      fill: "white";
+    }
+
+  }
+
+  .arrow-lt {
+    transform: translatex(0.5%);
+
+    &>polygon:hover {
+      fill: "white";
+    }
+
+  }
+}

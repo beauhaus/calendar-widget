@@ -2,13 +2,9 @@ import React from 'react'
 
 import SMTWTFS from './smtwtfs'
 
-
 import dayv5Styles from './dayv5.module.scss';
 import EvtSlots from './evtslots';
-import { calendarUtils, filledArray } from '../utils/date-utils'
 
-// filledArray("2020-08-22")
-// var currentMonthArray = calendarUtils("currentMonthArray")
 
 const CellDefs = () => (
     <defs>
@@ -39,13 +35,11 @@ const CellDefs = () => (
     </defs>
 )
 
-const DayV5 = (props) => {
+const DayV5 = ({gridArray}) => {
     // console.log("p>dV5: ", props)
-    const dayGrid = [...new Array(49)]
-    var selectedDate = "2020-08-22";
-    const gridArray = filledArray(selectedDate)
+    // const dayGrid = [...new Array(49)]
 
-    // console.log("gArr: ", gridArray)
+    console.log("gridArray is array?: ", gridArray)
     return (
         <g>
             <CellDefs />
@@ -53,7 +47,6 @@ const DayV5 = (props) => {
             {gridArray.map((elem, idx) => {
                 let xShift = Math.floor(idx % 7);
                 let yShift = Math.floor(idx / 7);
-
 
                 let xBase = 45;
                 let xInc = (xShift * 130) + xBase;
