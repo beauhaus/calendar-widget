@@ -1,6 +1,6 @@
 import moment from 'moment'
 
-export const filledArray = (selectedMonth) => {
+export const monthArrayMaker = (selectedMonth) => {
 
     const dayIconRow = new Array(7).fill({"desc": "dayIcon"}) // 7
 

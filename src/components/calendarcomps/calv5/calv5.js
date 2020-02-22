@@ -5,8 +5,7 @@ import DayV5 from './dayv5'
 import calv5Nav from './calv5nav'
 import CalV5Nav from './calv5nav';
 import moment from 'moment'
-import {  filledArray } from '../utils/date-utils'
-import {  monthArrayMaker } from '../utils/month-array-maker'
+import {  monthArrayMaker } from '../utils/date-utils'
 
 
 
@@ -16,24 +15,17 @@ const CalendarV5 = () => {
     /********* Month CONTROL ********************************/
     const incrementMonth = () => {
       let addMonth = moment(selectedDate).add(1, 'month').format("YYYY-MM-DD");
-      console.log("INC!")
-      // return setSelectedDate(addMonth)
+      return setSelectedDate(addMonth)
   }
 
   const decrementMonth = () => {
-      console.log("Dec!!")
       let subtractMonth = moment(selectedDate).subtract(1, 'month').format("YYYY-MM-DD");
-      // return setSelectedDate(subtractMonth)
+      return setSelectedDate(subtractMonth)
   }
   /****************************************************************/
-      var testDate = "2020-08-22";
 
-      const gridArray = filledArray(testDate)
-      console.log("gridArr is array?: ", gridArray.length)
-      // gridArray.map(elem => console.log("elem: ", elem))
-      // const gridArray2 = monthArrayMaker(testDate)
-      // console.log("mAm: ", gridArray2)
-            
+      const gridArray = monthArrayMaker(selectedDate)
+
   return (
     <div className={calv5Styles.calv5Container}>
       <div className={calv5Styles.calv5Subcontainer}>

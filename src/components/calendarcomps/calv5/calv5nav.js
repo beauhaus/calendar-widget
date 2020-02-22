@@ -4,25 +4,23 @@ import React from 'react'
 
 import navStyles from './calv5nav.module.scss'
 
-const CalV5Nav = ({ decMonth, incMonth,selectedDate }) => {
-console.log("selectedDate: ", selectedDate)
-            return (
+const CalV5Nav = ({ decMonth, incMonth, selectedDate }) => {
+    return (
         <g className={navStyles.navContainer}>
             <g className={navStyles.arrowLt} onClick={decMonth}>
-                <svg width="3%" viewBox="0 0 50 100">
-                <polygon fill="transparent" points="0,50 50,0 50,100"/>
-  <path fill="#555" d="M50 0v100L0 50 50 0zm-6 14L8 50l36 36V14z"/>
+                <svg width="5%" viewBox="0 0 100 75">
+                    <polygon points="10,50 70,100 70,0" />
+                    <polygon fill="#af3708" points="20,50 80,100 80,0" />
                 </svg>
             </g>
             <g className={navStyles.arrowRt} onClick={incMonth}>
-                <svg width="3%" viewBox="0 0 50 100" preserveAspectRatio="xMidYMid meet">
-                <polygon fill="transparent" points="50,50 0,0 0,100"/>
-  <path fill="#555" d="M0 0v100l50-50L0 0zm6 14l36 36L6 86V14z"/>
+                <svg width="5%" viewBox="0 0 100 75" preserveAspectRatio="xMidYMid meet">
+                    <polygon points="70,50 10,100 10,0" />
+                    <polygon fill="#af3708" points="60,50 0,100 0,0" />
                 </svg>
             </g>
         </g>
     )
-
 }
 
 export default CalV5Nav;

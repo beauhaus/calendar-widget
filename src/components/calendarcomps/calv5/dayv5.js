@@ -36,10 +36,7 @@ const CellDefs = () => (
 )
 
 const DayV5 = ({gridArray}) => {
-    // console.log("p>dV5: ", props)
-    // const dayGrid = [...new Array(49)]
 
-    console.log("gridArray is array?: ", gridArray)
     return (
         <g>
             <CellDefs />
