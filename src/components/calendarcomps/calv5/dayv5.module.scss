@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400&display=swap');
 
 .dayv5container {
   rect {
@@ -6,7 +6,7 @@
     height: 100%;
   }
   .grid-num {
-    font-weight: 100;
+    font-weight: 400;
     font-size: 60px;
     fill: #fff;
     filter: url(#txtShad);

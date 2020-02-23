@@ -10,16 +10,16 @@ const SMTWTFS = ({ dayNum }) => {
                 return <path d="M60 30H45c19.62.09 19.62 29.91 0 30H0V30h15C-4.62 29.91-4.62.09 15 0h45v30z" />;
                 break;
             case 2:
-                return <path d="M40.71 0L30 10.71 19.29 0H0v60h60V0z" />;
+                return <path d="M60 0v60H0V0l30 30z"/>;
                 break;
             case 3:
-                return <path d="M0 0v40h20v20h20V40h20V0z" />;
+                return <path d="M60 0v30H45v30H15V30H0V0z"/>;
                 break;
             case 4:
-                return <path d="M40.71 60L30 49.29 19.29 60H0V0h60v60z" />;
+                return <path d="M15 60C6.72 60 0 53.28 0 45V0h60v45c0 8.28-6.72 15-15 15s-15-6.72-15-15c0 8.28-6.72 15-15 15z"/>;
                 break;
             case 5:
-                return <path d="M0 0v40h20v20h20V40h20V0z" />;
+                return <path d="M60 0v30H45v30H15V30H0V0z"/>;
                 break;
             case 6:
                 return <path d="M0 0v60h20V40h20V20h20V0z" />;

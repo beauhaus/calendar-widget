@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 
 import SMTWTFS from './smtwtfs'
 
@@ -50,7 +51,8 @@ const DayV5 = ({gridArray}) => {
 
                 let yBase = 25;
                 let yInc = (yShift * 69) + yBase;
-
+                
+                let dayNum = moment(elem.thisDayDate).format("D");
                 return (
                     <g key={idx} transform={`translate(${xInc},${yInc})`} >
                         {(elem.desc === "dayIcon") &&
@@ -78,7 +80,7 @@ const DayV5 = ({gridArray}) => {
                                 <rect className={dayv5Styles.shadPanelV} />
                                 <rect className={dayv5Styles.shadPanelH} />
                                 <rect className={dayv5Styles.innerFrame} />
-                                <text className={dayv5Styles.gridNum} x="3%" y="90%" >{`${elem.dayNum}`}</text>
+                                <text className={dayv5Styles.gridNum} x="3%" y="90%" >{`${dayNum}`}</text>
 
                             </svg>
                             }
