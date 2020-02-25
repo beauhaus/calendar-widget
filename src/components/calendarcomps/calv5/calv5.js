@@ -7,6 +7,8 @@ import moment from 'moment'
 import { monthArrayMaker } from '../utils/date-utils'
 import MonthDisplay from './monthdisplay'
 import YearDisplay from './yeardisplay'
+import SVGDefs from './svgdefs'
+
 
 
 const CalendarV5 = () => {
@@ -34,13 +36,7 @@ const CalendarV5 = () => {
           preserveAspectRatio="none"
           viewBox="0 0 1000 550"
           width="100%">
-          <filter id='roughpaper'>
-            <feTurbulence type="turbulence" baseFrequency='0.34' result='noise' numOctaves="1" />
-            <feDiffuseLighting in='noise' lightingColor='#fff' surfaceScale='1.2' result='light'>
-              <feDistantLight azimuth='50' elevation='70' />
-            </feDiffuseLighting>
-            <feBlend in="SourceGraphic" mode="multiply" />
-          </filter>
+          <SVGDefs/>
           <rect width="100%" height="100%" fill="#949494" filter="url(#roughpaper)" />
           
           <YearDisplay selectedDate={selectedDate} />
