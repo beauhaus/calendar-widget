@@ -1,0 +1,16 @@
+.year-container {
+   .tens {
+      // fill: #d3d3d3;
+      // mix-blend-mode: color-burn;
+      fill: rgb(228, 193, 181);
+      mix-blend-mode: color-burn;
+
+   }
+   .ones {
+      fill: rgb(110, 129, 129);
+      mix-blend-mode: screen;
+   }
+   .apostrophe {
+      fill: #474747;
+   }
+}

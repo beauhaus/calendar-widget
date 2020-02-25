@@ -1,11 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap');
-
-.month-container {
- & ~ rect, & ~ text {
-   display: none;
- }
+.days-container {
  path {
    filter: url(#innerShad);
-   fill: #ddd;
+   fill: rgb(209, 169, 124);
  }
 }

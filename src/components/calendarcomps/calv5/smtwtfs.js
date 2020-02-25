@@ -1,6 +1,6 @@
 import React from 'react'
 
-import monthStyles from './smtwtfs.module.scss';
+import dayStyles from './smtwtfs.module.scss';
 
 const SMTWTFS = ({ dayNum }) => {
     // console.log("gridnum & content: ", gridNum, "-", content)
@@ -30,15 +30,14 @@ const SMTWTFS = ({ dayNum }) => {
             default:
                 break;
         }
-    }
+    } 
     return (
         <svg
-            // className={monthStyles.dayv5container}
-            width="13%"
+            width="11.5%"
             viewBox="0 951 514 272"
             preserveAspectRatio="xMidYMid meet"
         >
-            <svg className={monthStyles.monthContainer} height="60%" viewBox="0 0 60 60" >
+            <svg className={dayStyles.daysContainer} height="40%" viewBox="0 0 60 60" >
                 {renderPath(dayNum)}
             </svg>
         </svg>
