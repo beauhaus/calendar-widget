@@ -8,7 +8,10 @@ const CalV6 = () => (
     <div className={v6Styles.v6Container}>
         <h2>hello</h2>
         <Link to="/"><button>Home</button></Link>
-        <Queries />
+        <div className={v6Styles.msgContainer}>
+            <h1 className={v6Styles.msg}></h1>
+        </div>
+        {/* <Queries /> */}
     </div>
 )
 
