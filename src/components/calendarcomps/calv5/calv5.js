@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import calv5Styles from './calv5.module.scss';
-import Queries from '../queries'
+import Queries from '../utils/queries'
 import DayV5 from './dayv5'
 import CalV5Nav from './calv5nav';
 import moment from 'moment'

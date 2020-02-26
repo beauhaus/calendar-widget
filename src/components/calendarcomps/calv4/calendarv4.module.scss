@@ -75,34 +75,34 @@ svg.outer-svg {
 
 
 /******TAB******/
-@media screen and (min-width: 567px) {
-  :root {
-    --colWidth: 12%;
-    --rowHeight: 12%;
-    --rowIncrement: 12.1%;
-    --topMargin: 17%;
-    --Lmargin: 7.16%;
-    --colIncrement: 1;
-  }
+// @media screen and (min-width: 567px) {
+  // :root {
+  //   --colWidth: 12%;
+  //   --rowHeight: 12%;
+  //   --rowIncrement: 12.1%;
+  //   --topMargin: 17%;
+  //   --Lmargin: 7.16%;
+  //   --colIncrement: 1;
+  // }
 
-  svg.outer-svg {
-    height: 65vh;
-    width: 90vw;
-  }
+  // svg.outer-svg {
+  //   height: 65vh;
+  //   width: 90vw;
+  // }
 
-  .smtwtfs {
-    &-phone {
-      display: none;
-    }
+  // .smtwtfs {
+  //   &-phone {
+  //     display: none;
+  //   }
 
-    &-tablet {
-      display: block;
-    }
+  //   &-tablet {
+  //     display: block;
+  //   }
 
-    &-desk {
-      display: none;
-    }
-  }
+  //   &-desk {
+  //     display: none;
+  //   }
+  // }
 
 
   /*
@@ -119,60 +119,60 @@ svg.outer-svg {
   //   fill: rgba(122, 34, 133, 0.5);
   // }
 
-  .tabnote {
-    opacity: 1;
-  }
+  // .tabnote {
+  //   opacity: 1;
+  // }
 
-  .phonenote,
-  .desknote {
-    opacity: 0;
-  }
+  // .phonenote,
+  // .desknote {
+  //   opacity: 0;
+  // }
 
 
-}
+// }
 
 /***************************************************/
 /******************* Desk & cascade ****************/
 /***************************************************/
-@media screen and (min-width: 1025px) {
-  :root {
-    --colWidth: 13%;
-    --rowHeight: 11.7%;
-    --rowIncrement: 12%;
-    --topMargin: 20%;
-    --Lmargin: 3.9%;
-  }
+// @media screen and (min-width: 1025px) {
+//   :root {
+//     --colWidth: 13%;
+//     --rowHeight: 11.7%;
+//     --rowIncrement: 12%;
+//     --topMargin: 20%;
+//     --Lmargin: 3.9%;
+//   }
 
-  svg.outer-svg {
-    height: 80vh;
-    width: 80vw;
-  }
+//   svg.outer-svg {
+//     height: 80vh;
+//     width: 80vw;
+//   }
 
-  .desknote {
-    opacity: 1;
-  }
+//   .desknote {
+//     opacity: 1;
+//   }
 
-  .tabnote,
-  .phonenote {
-    opacity: 0;
-  }
+//   .tabnote,
+//   .phonenote {
+//     opacity: 0;
+//   }
 
-  .smtwtfs {
-    &-phone {
-      display: none;
-    }
+//   .smtwtfs {
+//     &-phone {
+//       display: none;
+//     }
 
-    &-tablet {
-      display: none;
-    }
+//     &-tablet {
+//       display: none;
+//     }
 
-    &-desk {
-      display: block;
-    }
-  }
+//     &-desk {
+//       display: block;
+//     }
+//   }
 
-  // .bg {
-  //   fill: rgba(255, 238, 87, 0.5);
-  // }
+//   // .bg {
+//   //   fill: rgba(255, 238, 87, 0.5);
+//   // }
 
-}
+// }

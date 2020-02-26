@@ -11,6 +11,7 @@ const Index = () => {
         <div className={indexStyles.container}>
             <nav>
             <Link to="/calendar-page"><button>Calendar Page</button></Link>
+            <Link to="/calv6"><button>calv6</button></Link>
             <Link to="/calv5"><button>calv5</button></Link>
             <a href="https://reactcalendar-v3.netlify.com/">online</a>
             <Link to="/eye"><button>eye</button></Link>

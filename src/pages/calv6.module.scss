@@ -1,0 +1,11 @@
+
+.container {
+  background: linear-gradient(45deg, orange 20%, green 20% 70%, grey 70% 100%);
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
