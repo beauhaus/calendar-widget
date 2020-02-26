@@ -33,7 +33,23 @@ const SMTWTFS = ({ dayNum }) => {
     } 
     return (
         <svg
-            width="11.5%"
+        width="12.5%"
+        viewBox="0 951 514 272"
+        preserveAspectRatio="xMidYMid meet"
+    >
+        <svg className={dayStyles.daysContainer} height="40%" viewBox="0 0 60 60" >
+            {renderPath(dayNum)}
+        </svg>
+    </svg>
+    )
+}
+
+export default SMTWTFS;
+
+/*
+Desktop
+ <svg
+            width="12.5%"
             viewBox="0 951 514 272"
             preserveAspectRatio="xMidYMid meet"
         >
@@ -41,7 +57,4 @@ const SMTWTFS = ({ dayNum }) => {
                 {renderPath(dayNum)}
             </svg>
         </svg>
-    )
-}
-
-export default SMTWTFS;
+        */

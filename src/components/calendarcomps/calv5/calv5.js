@@ -30,7 +30,7 @@ const CalendarV5 = () => {
   // console.log("gridArr: ", gridArray[22].thisDayDate.format("D"))
 
   return (
-    <div className={calv5Styles.calv5Container}>
+<div className={calv5Styles.calv5Container}>
       <div className={calv5Styles.calv5Subcontainer}>
         <svg className={calv5Styles.calv5ContainerSvg}
           preserveAspectRatio="none"
@@ -48,7 +48,7 @@ const CalendarV5 = () => {
             selectedDate={selectedDate}
           />
         </svg>
-        {/* <Queries /> */}
+        <Queries /> 
       </div>
     </div>
   )
@@ -57,3 +57,28 @@ const CalendarV5 = () => {
 
 
 export default CalendarV5;
+
+/* desktop version
+<div className={calv5Styles.calv5Container}>
+      <div className={calv5Styles.calv5Subcontainer}>
+        <svg className={calv5Styles.calv5ContainerSvg}
+          preserveAspectRatio="none"
+          viewBox="0 0 1000 550"
+          width="100%">
+          <SVGDefs/>
+          <rect width="100%" height="100%" fill="#949494" filter="url(#roughpaper)" />
+          
+          <YearDisplay selectedDate={selectedDate} />
+          <MonthDisplay selectedDate={selectedDate} />
+          <DayV5 gridArray={gridArray} />
+          <CalV5Nav
+            decMonth={decrementMonth}
+            incMonth={incrementMonth}
+            selectedDate={selectedDate}
+          />
+        </svg>
+        <Queries /> 
+      </div>
+    </div>
+
+*/
