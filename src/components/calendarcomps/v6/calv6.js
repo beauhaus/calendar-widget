@@ -7,7 +7,7 @@ import v6Styles from './calv6.module.scss';
 const CalV6 = () => (
     <div className={v6Styles.v6Container}>
         <Link to="/"><button>Home</button></Link>
-        <Queries/>
+        {/* <Queries/>
         <nav className={v6Styles.nav}>
                     <p>Navigation</p>
                 </nav>
@@ -64,7 +64,7 @@ const CalV6 = () => (
                     <p>C evt list</p>
                 </section>
 
-        </div>
+        </div> */}
     </div>
 )
 

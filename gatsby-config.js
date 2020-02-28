@@ -1,7 +1,8 @@
 module.exports = {
     siteMetadata: {
         "title": "calendar-widget",
-        "description": "calendar widget for gatsby react"
+        "description": "calendar widget for gatsby react",
+        "favicon": "./static/favicon.svg"
     },
     plugins:[
         "gatsby-plugin-react-helmet",
@@ -15,6 +16,7 @@ module.exports = {
             background_color: `#f7f0eb`,
             theme_color: `#a2466c`,
             display: `standalone`,
+            icon: siteMetadata.favicon
           },
         },
         `gatsby-plugin-offline`,
