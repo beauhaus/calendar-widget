@@ -6,12 +6,65 @@ import v6Styles from './calv6.module.scss';
 
 const CalV6 = () => (
     <div className={v6Styles.v6Container}>
-        <h2>hello</h2>
         <Link to="/"><button>Home</button></Link>
-        <div className={v6Styles.msgContainer}>
-            <h1 className={v6Styles.msg}></h1>
+        <Queries/>
+        <nav className={v6Styles.nav}>
+                    <p>Navigation</p>
+                </nav>
+
+            <div className={v6Styles.wrapper}>
+                
+                <section className={v6Styles.daySubgrid}>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+                    <span className={v6Styles.day}>d</span>
+
+
+                </section>
+
+                <section className={v6Styles.evts}>
+                    <p>C evt list</p>
+                </section>
+
         </div>
-        {/* <Queries /> */}
     </div>
 )
 

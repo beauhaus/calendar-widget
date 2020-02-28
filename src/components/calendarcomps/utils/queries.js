@@ -21,54 +21,45 @@ h1 {
         content: 'phone portrait';
     }
 
-
-
     /*  Phone Portrait  */
-    @media only screen 
-    // and (max-device-width: 414px)
-    and (min-width: 320px)
-    and (orientation: portrait) { 
-        .msg::after {
-            content: '☎️ Portrait';
-            color: maroon;
-        }
-    }
-    
-    /*  Phone Landscape  */
-    @media only screen 
-    and (max-device-width: 812px) 
-    and (orientation: landscape) { 
-        .msg::after {
-            content: '☎️ Landscape';
-            color: maroon;
-        }
-    }
-    
-
-/* ----------- iPad/Mini portrait ----------- */
-@media only screen 
-and (min-width: 768px) 
-and (orientation: portrait) {
-    .msg::after {
-        content: 'tablet';
+    @media only screen // and (max-device-width: 414px)
+    and (min-width: 320px) and (orientation: portrait) {
+      .msg::after {
+        content: '☎️ Portrait';
         color: maroon;
+      }
     }
-}
-
-
-/******DESK and tablet landscape******/
-@media only screen and (min-width: 1024px)   {
-    .msg::after {
+  
+    /*  Phone Landscape  */
+    @media only screen and (max-device-width: 812px) and (orientation: landscape) {
+      .msg::after {
+        content: '☎️ Landscape';
+        color: maroon;
+      }
+    }
+  
+  
+    /* ----------- iPad/Mini portrait ----------- */
+    @media only screen and (min-width: 768px) and (orientation: portrait) {
+      .msg::after {
+        content: 'tablet';
+      }
+    }
+  
+  
+    /******DESK and tablet landscape******/
+    @media only screen and (min-width: 1024px) {
+      .msg::after {
         content: 'DESKTOP';
-        color: #000;
-    }
-} 
-
+      }
+  
+  
+  
 `
 const Queries = () => {
 
     return (
-        <StyledQueries className="queries">
+        <StyledQueries className="msg-container">
             <h1 className="msg"></h1>            
         </StyledQueries>
     )

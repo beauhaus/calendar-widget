@@ -1,25 +1,73 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400&display=swap');
 
 .v6-container {
+
+  --auto-grid-min-size: 275px;
   // display: block;
   width: 100vw;
   height: 100vh;
+  margin: auto;
   position: relative;
+
+
+  .nav {
+    text-align: center;
+    background-color: lemonchiffon;
+    width: 100%;
+    height: 10%;
+  }
+
+
+  .evts {
+    background-color: burlywood;
+  }
+
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    height: 90%;
+    box-shadow: inset 0 0 1px 2px fuchsia;
+  }
+  .day-subgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(14%, 1fr));
+    // grid-area: days;
+    background-color: coral;
+    // height: 100%;
+    .day {
+      background: rgba(200, 200, 200, 0.5);
+    }
+  }
+
+  section {
+    opacity: 0.8;
+    // height: 100%;
+  }
+
+
+
+
+
+
+
+
   .msg-container {
     position: absolute;
     top: 0;
-    right: 30vw;
+    right: 0;
     background-color: rgba(255, 239, 213, 0.424);
     z-index: 5;
-    width: 50vw;
+    width: 30vw;
+
     .msg {
-      padding: 1%;
-      font-size: 1.5rem;
+      padding: 2%;
+      font-size: 1rem;
       font-weight: 400;
       color: wheat;
       font-family: 'Josefin Sans', sans-serif;
     }
-    }
+  }
 
   button {
     position: absolute;
@@ -29,51 +77,31 @@
     height: 3vh;
     font: 15px Arial;
     color: #fff;
-   cursor: pointer;
-   background: transparent;
-   border: 1px solid #fff;
-   border-radius: 12px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 12px;
   }
 
 
 
 
-    /*  Phone Portrait  */
-    @media only screen 
-    // and (max-device-width: 414px)
-    and (min-width: 320px)
-    and (orientation: portrait) { 
-        .msg::after {
-            content: '☎️ Portrait';
-            color: maroon;
-        }
-    }
-    
-    /*  Phone Landscape  */
-    @media only screen 
-    and (max-device-width: 812px) 
-    and (orientation: landscape) { 
-        .msg::after {
-            content: '☎️ Landscape';
-            color: maroon;
-        }
-    }
-    
 
-/* ----------- iPad/Mini portrait ----------- */
-@media only screen 
-and (min-width: 768px) 
-and (orientation: portrait) {
+  /* ----------- iPad/Mini portrait ----------- */
+  @media only screen and (min-width: 768px) and (orientation: portrait) {
     .msg::after {
-        content: 'tablet';
+      content: 'tablet';
     }
-}
+    border: 3px dashed red;
+    width: 90vw;
+    height: 50vh;
+  }
 
 
-/******DESK and tablet landscape******/
-@media only screen and (min-width: 1024px)   {
+  /******DESK and tablet landscape******/
+  @media only screen and (min-width: 1024px) {
     .msg::after {
-        content: 'DESKTOP';
+      content: 'DESKTOP';
     }
 
 
@@ -84,6 +112,5 @@ and (orientation: portrait) {
 
 
 
-
-    }
+  }
 }
