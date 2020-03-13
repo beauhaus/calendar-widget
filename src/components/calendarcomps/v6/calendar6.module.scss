@@ -1,0 +1,58 @@
+.cal6-container {
+  --auto-grid-min-size: 275px;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .nav {
+    text-align: center;
+    background-color: lemonchiffon;
+    width: 100%;
+    height: 10%;
+  }
+
+  .evts {
+    background-color: burlywood;
+  }
+
+
+  .day-evt-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    height: 90%;
+    box-shadow: inset 0 0 1px 2px fuchsia;
+  }
+
+
+
+
+
+
+
+
+  .homebtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13vw;
+    height: 6vh;
+    font: 16px Arial;
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 12px;
+  }
+}
