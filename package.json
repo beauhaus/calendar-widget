@@ -22,7 +22,7 @@
     "gatsby-plugin-offline": "^3.0.35",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.27",
-    "gatsby-remark-images": "^3.1.42",
+    "gatsby-remark-images": "^7.9.0",
     "gatsby-source-filesystem": "^2.1.46",
     "gsap": "^3.0.5",
     "node-sass": "^4.13.1",
